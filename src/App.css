@@ -1,0 +1,80 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* styles.css */
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* styles.css */
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    flex: 1 1 100%;
+    padding: 1rem;
+}
+
+/* For screens larger than 768px (tablets and desktops) */
+@media (min-width: 768px) {
+    section {
+        flex: 1 1 50%;
+    }
+}
+
+/* For screens larger than 992px (desktops) */
+@media (min-width: 992px) {
+    section {
+        flex: 1 1 33.33%;
+    }
+}
