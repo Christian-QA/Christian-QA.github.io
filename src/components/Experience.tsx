@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Projects: React.FC = () => {
+const Experience: React.FC = () => {
     return (
-        <section id="projects">
-            <h2>My Projects</h2>
+        <section id="experience">
+            <h2>My Experience</h2>
             <ul>
                 <li>
                     <h3>Project 1</h3>
@@ -21,4 +21,4 @@ const Projects: React.FC = () => {
     );
 };
 
-export default Projects;
+export default Experience;

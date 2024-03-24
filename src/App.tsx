@@ -1,6 +1,7 @@
 //import { useState } from 'react'
 //import React from 'react';
 import Header from './components/Header';
+import Landing from './components/Landing';
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -15,6 +16,7 @@ function App() {
        <div className="App">
            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
            <Header />
+           <Landing />
            <main>
                <About />
                <Projects />
