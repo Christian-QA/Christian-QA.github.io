@@ -91,6 +91,13 @@ section > * {
     position: relative;
 }
 
+.about-cutoff {
+    width: 100%;
+    padding-bottom: 5%;
+    background-color: #ffffff;
+    position: relative;
+}
+
 .text-overlay {
     position: absolute;
     bottom: 33.33%; /* Positions the overlay about two-thirds down */

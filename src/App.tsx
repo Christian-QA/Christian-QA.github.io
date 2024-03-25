@@ -1,34 +1,34 @@
 //import { useState } from 'react'
 //import React from 'react';
-import Header from './components/Header';
-import Experience from './components/Experience';
+
+import Header from "./components/Header.tsx";
 import About from './components/About';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 import './App.css'
 import './index.css';
-import React from "react";
-
+import React from 'react';
 
 const App: React.FC = () => {
     return (
         <div className="App">
-            <Header />
+            <Header/>
             <section id="about">
-                <About />
+                <About/>
             </section>
             <section id="experience">
-                <Experience />
+                <Experience/>
             </section>
             <section id="projects">
-                <Projects />
+                <Projects/>
             </section>
             <section id="contact">
-                <Contact />
+                <Contact/>
             </section>
-            <Footer />
+            <Footer/>
         </div>
     );
 };

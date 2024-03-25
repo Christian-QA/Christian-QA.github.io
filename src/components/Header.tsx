@@ -1,5 +1,5 @@
 import React from 'react';
-import i18n from "i18next";
+import i18n, {TFunction} from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import Messages from "../lang/en.tsx";
 
@@ -15,29 +15,33 @@ const Header: React.FC = () => {
             <nav>
                 <ul>
                     <li>
-                        <button>
-                            <a href="#about">{t('header.about')}</a>
-                        </button>
+                        {smoothScroll({id: "about", text: "header.about", t})}
                     </li>
                     <li>
-                        <button>
-                            <a href="#experience">{t('header.experience')}</a>
-                        </button>
+                        {smoothScroll({id: "experience", text: "header.experience", t})}
                     </li>
                     <li>
-                        <button>
-                            <a href="#projects">{t('header.projects')}</a>
-                        </button>
+                        {smoothScroll({id: "projects", text: "header.projects", t})}
                     </li>
                     <li>
-                        <button>
-                            <a href="#contact">{t('header.contact')}</a>
-                        </button>
+                        {smoothScroll({id: "contact", text: "header.contact", t})}
                     </li>
                 </ul>
             </nav>
         </header>
     );
 };
+
+const smoothScroll = ({ id, text, t}: { id: string; text: string; t: TFunction<"translation", undefined> }) => {
+    const handleClick = () => {
+        const element = document.getElementById(id);
+        element?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    return (
+        <button onClick={handleClick}>{t(text)}</button>
+    );
+};
+
 
 export default Header;
