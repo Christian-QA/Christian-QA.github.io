@@ -13,17 +13,17 @@ const About: React.FC = () => {
     return (
         <section className="about-section">
             <div className="image-container">
-                <img src="src/assets/portfolio_image.jpg" alt="Me"/>
+                <div className="image-placeholder">
+                    <div className="text-overlay">
+                        <h2>{t('about.title')}</h2>
+                        <p className="subtitle">{t('about.subtitle')}</p>
+                        <p className="tagline">{t('about.tagline')}</p>
+                    </div>
+                </div>
             </div>
             <div className="text-container">
-                <h2>{t('about.title')}</h2>
-                <p className="subtitle">{t('about.subtitle')}</p>
-                <p className="tagline">{t('about.tagline')}</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec bibendum eros, vel malesuada sapien.
-                    Nullam ac dolor nec tellus bibendum pretium.</p>
-                <p>Etiam eget ex vel neque sollicitudin rutrum. Suspendisse potenti. Fusce vel enim ac eros bibendum
-                    facilisis. Nunc facilisis, ex vel consequat tempus, risus tellus bibendum elit, sed pharetra ligula
-                    ipsum sit amet nisl.</p>
+                <p>{t('about.paragraphOne')}</p>
+                <p>{t('about.paragraphTwo')}.</p>
             </div>
         </section>
     );
