@@ -2,6 +2,11 @@ const Messages = {
     resources: {
         en: {
             translation: {
+                "header.about": "About",
+                "header.experience": "Experience",
+                "header.projects": "Projects",
+                "header.contact": "Contact",
+
                 "about.title": "Christian Redfern",
                 "about.subtitle": "Full Stack Developer",
                 "about.tagline": "Heyo, welcome to my portfolio website!",

@@ -23,6 +23,7 @@ const About: React.FC = () => {
             </div>
             <div className="text-container">
                 <p>{t('about.paragraphOne')}</p>
+                <br></br>
                 <p>{t('about.paragraphTwo')}.</p>
             </div>
         </section>
