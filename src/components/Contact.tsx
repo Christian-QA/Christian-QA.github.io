@@ -2,7 +2,7 @@ import React from 'react';
 
 const Contact: React.FC = () => {
     return (
-        <section id="contact">
+        <div className="section-content">
             <h2>Contact Me</h2>
             <form>
                 <label htmlFor="name">Name:</label>
@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
 
                 <button type="submit">Send Message</button>
             </form>
-        </section>
+        </div>
     );
 };
 

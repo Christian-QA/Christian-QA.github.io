@@ -16,6 +16,42 @@ header {
     padding: 1rem;
 }
 
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem;
+    width: 100%;
+}
+
+/* For screens larger than 768px (tablets and desktops) */
+@media (min-width: 768px) {
+    section {
+        padding: 4rem 2rem;
+    }
+}
+
+/* Content styles */
+section > * {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 form label {
     display: block;
     margin-bottom: 0.5rem;
@@ -36,45 +72,49 @@ footer {
     text-align: center;
 }
 
-/* styles.css */
-nav ul {
+.about-section {
     display: flex;
-    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-/* For screens smaller than 768px (mobile devices) */
-@media (max-width: 767px) {
-    nav ul {
-        flex-direction: row;
+.image-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.text-container {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
     }
 
-    nav ul li {
-        margin-right: 0;
-        margin-bottom: 0.5rem;
-    }
-}
-
-/* styles.css */
-main {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-section {
-    flex: 1 1 100%;
-    padding: 1rem;
-}
-
-/* For screens larger than 768px (tablets and desktops) */
-@media (min-width: 768px) {
-    section {
-        flex: 1 1 50%;
-    }
-}
-
-/* For screens larger than 992px (desktops) */
-@media (min-width: 992px) {
-    section {
-        flex: 1 1 33.33%;
+    .image-container,
+    .text-container {
+        max-width: 100%;
     }
 }

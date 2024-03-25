@@ -2,22 +2,18 @@ import React from 'react';
 
 const Experience: React.FC = () => {
     return (
-        <section id="experience">
-            <h2>My Experience</h2>
+        <div className="section-content">
+            <h2>Experience</h2>
             <ul>
                 <li>
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1</p>
-                    {/* Add more details about the project, like images or links */}
+                    <h3>Job Title</h3>
+                    <p>Company Name</p>
+                    <p>Date Range</p>
+                    <p>Description of your experience</p>
                 </li>
-                <li>
-                    <h3>Project 2</h3>
-                    <p>Description of Project 2</p>
-                    {/* Add more details about the project, like images or links */}
-                </li>
-                {/* Add more project entries as needed */}
+                {/* Add more experience entries as needed */}
             </ul>
-        </section>
+        </div>
     );
 };
 

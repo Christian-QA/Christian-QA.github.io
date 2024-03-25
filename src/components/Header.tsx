@@ -1,23 +1,21 @@
 import React from 'react';
+
 const Header: React.FC = () => {
     return (
         <header>
             <nav>
                 <ul>
                     <li>
-                        <button>
-                            <a href="#about">About</a>
-                        </button>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <button>
-                            <a href="#projects">Projects</a>
-                        </button>
+                        <a href="#experience">Experience</a>
                     </li>
                     <li>
-                        <button>
-                            <a href="#contact">Contact</a>
-                        </button>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </nav>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects: React.FC = () => {
     return (
-        <section id="projects">
+        <div className="section-content">
             <h2>My Projects</h2>
             <ul>
                 <li>
@@ -17,7 +17,7 @@ const Projects: React.FC = () => {
                 </li>
                 {/* Add more project entries as needed */}
             </ul>
-        </section>
+        </div>
     );
 };
 
