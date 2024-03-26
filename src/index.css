@@ -30,9 +30,30 @@ body {
   min-height: 100vh;
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 button {

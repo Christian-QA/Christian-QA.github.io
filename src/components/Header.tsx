@@ -33,8 +33,8 @@ const Header: React.FC = () => {
 };
 
 const smoothScroll = ({ id, text, t}: { id: string; text: string; t: TFunction<"translation", undefined> }) => {
-    const handleClick = () => {
-        const element = document.getElementById(id);
+    const handleClick = (): void => {
+        const element: HTMLElement | null = document.getElementById(id);
         element?.scrollIntoView({ behavior: "smooth" });
     };
 
