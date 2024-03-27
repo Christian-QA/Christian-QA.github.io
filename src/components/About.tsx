@@ -13,18 +13,40 @@ const About: React.FC = () => {
     return (
         <section className="about-section">
             <div className="image-container">
-                <div className="image-placeholder">
+                <img src="/src/assets/portfolio_image.jpg" alt="me" className="portfolio-image"></img>
                     <div className="text-overlay">
                         <h2>{t('about.title')}</h2>
                         <p className="subtitle">{t('about.subtitle')}</p>
                         <p className="tagline">{t('about.tagline')}</p>
                     </div>
-                </div>
+
             </div>
             <div className="text-container">
-                <p>{t('about.paragraphOne')}</p>
-                <br></br>
-                <p>{t('about.paragraphTwo')}.</p>
+                <div className="about-me"><h1>{t('about.aboutMe')}</h1></div>
+                <div className="about-story">
+                    <p>{t('about.paragraphOne')}</p>
+                    <br></br>
+                    <p>{t('about.paragraphTwo')}.</p>
+                </div>
+                <div className="row-grid">
+                    <div className="column-grid">
+                        <img src="/src/assets/language-logos/scala-ar21.svg" alt="scala"/>
+                        <img src="/src/assets/language-logos/java-ar21.svg" alt="java"/>
+                        <img src="/src/assets/language-logos/kotlinlang-ar21.svg" alt="typescript"/>
+                    </div>
+                    <div className="column-grid">
+                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
+                        <img src="/src/assets/language-logos/dartlang-official.svg" alt="dart"/>
+                    </div>
+                    <div className="column-grid">
+                        <img src="/src/assets/language-logos/typescriptlang-icon.svg" alt="javascript"/>
+                        <img src="/src/assets/language-logos/python-official.svg" alt="python"/>
+                    </div>
+                    <div className="column-grid">
+                        <img src="/src/assets/language-logos/w3_html5-ar21.svg" alt="html"/>
+                        <img src="/src/assets/language-logos/w3_css-ar21.svg" alt="css"/>
+                    </div>
+                </div>
             </div>
         </section>
     );

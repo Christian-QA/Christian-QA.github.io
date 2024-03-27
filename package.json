@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://christian-qa.github.io/christian-qa.github.io/",
+  "homepage": "https://christian-qa.github.io/christian-qa.github.io/dist",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Montserrat, serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -30,15 +32,36 @@ body {
   min-height: 100vh;
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.6em 1em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
