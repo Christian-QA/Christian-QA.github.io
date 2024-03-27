@@ -40,6 +40,10 @@ const About: React.FC = () => {
                         <img src="/src/assets/language-logos/typescriptlang-icon.svg" alt="javascript"/>
                         <img src="/src/assets/language-logos/python-official.svg" alt="python"/>
                     </div>
+                    <div className="column-grid">
+                        <img src="/src/assets/language-logos/w3_html5-ar21.svg" alt="html"/>
+                        <img src="/src/assets/language-logos/w3_css-ar21.svg" alt="css"/>
+                    </div>
                 </div>
             </div>
         </section>
