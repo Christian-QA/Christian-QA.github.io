@@ -26,7 +26,7 @@ const About: React.FC = () => {
                 <div className="about-story">
                     <p>{t('about.paragraphOne')}</p>
                     <br></br>
-                    <p>{t('about.paragraphTwo')}.</p>
+                    <p>{t('about.paragraphTwo')}</p>
                 </div>
                 <div className="row-grid">
                     <div className="column-grid">

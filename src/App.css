@@ -10,6 +10,7 @@
 body {
     font-family: Montserrat, sans-serif;
     line-height: 1.6;
+    background-color: #050505;
 }
 
 header {
@@ -82,6 +83,7 @@ footer {
 section > * {
     max-width: 1200px;
     margin: 0;
+    background-color: #2a2b2f;
 }
 
 .about-section {
@@ -90,8 +92,7 @@ section > * {
     align-items: center;
     max-width: 100%;
     max-height: 100%;
-    margin: 0 auto;
-    padding: 0 0 5%;
+    margin: 0 0 5%;
 }
 
 .image-container {
@@ -185,5 +186,14 @@ section > * {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+}
+
+.experience-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 0 5%;
 }
 
