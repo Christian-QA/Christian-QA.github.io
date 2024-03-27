@@ -34,25 +34,26 @@ const Experience: React.FC = () => {
                         x: 0,
                         y: 0,
                         width: window.innerWidth,
-                        height: window.innerHeight / 3,
+                        height: window.innerHeight,
                         top: 0,
                         right: window.innerWidth,
-                        bottom: window.innerHeight / 3,
+                        bottom: window.innerHeight,
                         left: 0,
                     };
                     const containerHeight = containerRect.height;
+                    const containerWidth = containerRect.width;
 
-                    if (divRect.top >= 0 && divRect.top < containerHeight / 3) {
+                    if (divRect.top >= 0 && divRect.top < containerHeight / 3 && divRect.left < containerWidth / 2) {
                         console.log(`Div ${divId} entered the top-left portion of the section`);
                         // Add any additional logic you need here
-                    } else if (divRect.bottom > containerHeight / 3 && divRect.bottom <= containerHeight) {
+                    } else if (divRect.bottom > containerHeight / 3 && divRect.bottom <= containerHeight && divRect.left < containerWidth / 2) {
                         console.log(`Div ${divId} entered the top-left portion of the section`);
                         // Add any additional logic you need here
                     }
                 });
             },
             {
-                root: sectionRef.current, // Observe the divs within the section
+                root: null, // Observe the divs within the viewport
                 rootMargin: '0px', // Adjust this value if you want to change the threshold
                 threshold: 0, // Trigger when the target is fully visible
             }
@@ -60,22 +61,52 @@ const Experience: React.FC = () => {
 
         observerRef.current = observer;
 
-        const divIds = ['div1', 'div2', 'div3']; // Replace with your div IDs
+        const observeDivs = () => {
+            const divIds = ['div1', 'div2', 'div3']; // Replace with your div IDs
 
-        divIds.forEach((divId) => {
-            const divRef = divRefs.current[divId] = document.getElementById(divId) as HTMLDivElement;
-            if (divRef) {
-                observer.observe(divRef);
-            }
+            divIds.forEach((divId) => {
+                const divRef = divRefs.current[divId] = document.getElementById(divId) as HTMLDivElement;
+                if (divRef) {
+                    observer.observe(divRef);
+                }
+            });
+        };
+
+        // Observe the divs when the component mounts
+        observeDivs();
+
+        // Observe the divs when the sectionRef changes
+        const sectionRefCallback = (entries: IntersectionObserverEntry[]) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    observeDivs();
+                }
+            });
+        };
+
+        const sectionObserver = new IntersectionObserver(sectionRefCallback, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0,
         });
 
+        if (sectionRef.current) {
+            sectionObserver.observe(sectionRef.current);
+        }
+
         return () => {
+            const divIds = ['div1', 'div2', 'div3'];
+
             divIds.forEach((divId) => {
                 const divRef = divRefs.current[divId];
                 if (divRef && observerRef.current) {
                     observerRef.current.unobserve(divRef);
                 }
             });
+
+            if (sectionRef.current) {
+                sectionObserver.unobserve(sectionRef.current);
+            }
         };
     }, []);
 
