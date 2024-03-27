@@ -41,12 +41,11 @@ const Experience: React.FC = () => {
                         left: 0,
                     };
                     const containerHeight = containerRect.height;
-                    const containerWidth = containerRect.width;
 
-                    if (divRect.top >= 0 && divRect.top < containerHeight / 3 && divRect.left < containerWidth / 2) {
+                    if (divRect.top >= 0 && divRect.top < containerHeight / 3) {
                         console.log(`Div ${divId} entered the top-left portion of the section`);
                         // Add any additional logic you need here
-                    } else if (divRect.bottom > containerHeight / 3 && divRect.bottom <= containerHeight && divRect.left < containerWidth / 2) {
+                    } else if (divRect.bottom > containerHeight / 3 && divRect.bottom <= containerHeight) {
                         console.log(`Div ${divId} entered the top-left portion of the section`);
                         // Add any additional logic you need here
                     }
