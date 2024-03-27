@@ -22,10 +22,12 @@ const About: React.FC = () => {
 
             </div>
             <div className="text-container">
-                <p>{t('about.paragraphOne')}</p>
-                <br></br>
-                <p>{t('about.paragraphTwo')}.</p>
-
+                <div className="about-me"><h1>{t('about.aboutMe')}</h1></div>
+                <div className="about-story">
+                    <p>{t('about.paragraphOne')}</p>
+                    <br></br>
+                    <p>{t('about.paragraphTwo')}.</p>
+                </div>
                 <div className="row-grid">
                     <div className="column-grid">
                         <img src="/src/assets/language-logos/scala-ar21.svg" alt="scala"/>
