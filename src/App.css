@@ -17,7 +17,7 @@ header {
     background-color: rebeccapurple;
     color: #fff;
     padding: 1rem;
-    max-width: 50%;
+    max-width: 100%;
     left: 0;
     position: fixed;
     z-index: 1000;
@@ -189,11 +189,154 @@ section > * {
 }
 
 .experience-section {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 100%;
     max-height: 100%;
     margin: 0 0 5%;
 }
 
+#timeline ul {
+    padding: 50px 0;
+}
+
+#timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 7px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: rebeccapurple;
+}
+
+#timeline ul li .box {
+    position: relative;
+    bottom: 0;
+    width: 450px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 5px #ffffff;
+    border-radius: 5px;
+}
+
+#timeline .title {
+    /*box-shadow: 0 5px 10px black;*/
+    padding: 1rem 0rem 1rem 0.7rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+    font-size: 1.3rem;
+    background-color: rebeccapurple;
+}
+
+#timeline .year {
+    background-color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 10px;
+    color: aqua;
+    font-size:0.9rem;
+    margin: 0 0.5rem;
+}
+
+#timeline p {
+    padding: 1rem 0 1rem 1rem;
+}
+
+#timeline button {
+    margin: 0.5rem 0 1rem 1rem;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background: transparent;
+    transition: all 0.3s ease-in;
+    cursor: pointer
+}
+
+#timeline button:hover {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+#timeline ul li:nth-child(odd) .box {
+    left: 50px
+}
+
+#timeline ul li:nth-child(even) .box {
+    right: 500px
+}
+
+#timeline ul li i {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background: #1a1a1a;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+@media (max-width: 1050px) {
+    .experience-section {
+        align-items: flex-start;
+        width: 80px;
+    }
+
+    #timeline ul li .box {
+        width: 450px;
+    }
+
+    #timeline ul {
+        padding: 50px 0 0 0;
+    }
+
+    #timeline ul li:nth-child(even) .box:before {
+        left: -15px;
+        border-width: 8px 0 8px 16px;
+        border-color: transparent aqua;
+    }
+
+    #timeline ul li:nth-child(odd) .box {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    #timeline ul li .box {
+        width: 350px;
+    }
+
+}
+
+
+#timeline .experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: aqua;
+}
+
+#timeline .box:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 0;
+    right: 0;
+    border-style: solid;
+}
+
+#timeline ul li:nth-child(odd) .box:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent aqua;
+}
+
+#timeline ul li:nth-child(even) .box:before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent aqua;
+}
