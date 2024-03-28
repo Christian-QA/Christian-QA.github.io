@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import i18n from "i18next";
 import {initReactI18next} from "react-i18next";
 import Messages from "../lang/en.tsx";
@@ -7,8 +7,33 @@ i18n
     .use(initReactI18next) // passes i18n down to react-i18next
     .init(Messages);
 
+
+const boxes = document.querySelectorAll(".box");
+
+function displayContent() {
+    const triggerBottom = (window.innerHeight / 5) * 4;
+    boxes.forEach((box) => {
+        const topBox = box.getBoundingClientRect().top;
+        if (topBox < triggerBottom) {
+            box.classList.add("show");
+        } else {
+            box.classList.remove("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", displayContent);
+
+
 const Experience: React.FC = () => {
     // const { t } = useTranslation();
+
+    useEffect(() => {
+        window.addEventListener("scroll", displayContent);
+        return () => {
+            window.removeEventListener("scroll", displayContent);
+        };
+    }, []);
 
 
     return (

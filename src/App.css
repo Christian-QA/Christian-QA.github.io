@@ -215,7 +215,15 @@ section > * {
     background-color: #1a1a1a;
     box-shadow: 0 0 5px #ffffff;
     border-radius: 5px;
+    transform: translateX(400%);
 }
+
+#timeline ul li .box .show {
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+}
+
+
 
 #timeline .title {
     /*box-shadow: 0 5px 10px black;*/
