@@ -314,11 +314,12 @@ section > * {
     border-color: transparent aqua;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1040px) {
     #timeline ul li .box {
         width: 320px;
     }
 
+    /* TODO - Find a way to make shrinking transition more seamless */
     #timeline ul li:nth-child(even) .box {
         left: -370px
     }
@@ -347,5 +348,4 @@ section > * {
     #timeline ul li:nth-child(even) .box {
         left: 40px;
     }
-
 }
