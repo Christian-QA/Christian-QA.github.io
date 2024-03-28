@@ -1,47 +1,45 @@
-import React, {useEffect} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import i18n from "i18next";
-import {initReactI18next} from "react-i18next";
+import { initReactI18next } from "react-i18next";
 import Messages from "../lang/en.tsx";
 
 i18n
-    .use(initReactI18next) // passes i18n down to react-i18next
+    .use(initReactI18next)
     .init(Messages);
 
-
-const boxes = document.querySelectorAll(".box");
-
-function displayContent() {
-    const triggerBottom = (window.innerHeight / 5) * 4;
-    boxes.forEach((box) => {
-        const topBox = box.getBoundingClientRect().top;
-        if (topBox < triggerBottom) {
-            box.classList.add("show");
-        } else {
-            box.classList.remove("show");
-        }
-    });
-}
-
-window.addEventListener("scroll", displayContent);
-
-
 const Experience: React.FC = () => {
-    // const { t } = useTranslation();
+    const [showBoxes, setShowBoxes] = useState<boolean[]>([]);
+    const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
 
     useEffect(() => {
-        window.addEventListener("scroll", displayContent);
+        const handleScroll = () => {
+            const triggerBottom = (window.innerHeight / 5) * 4;
+            const newShowBoxes = boxRefs.current.map((box) => {
+                if (box) {
+                    const topBox = box.getBoundingClientRect().top;
+                    return topBox < triggerBottom;
+                }
+                return false;
+            });
+            setShowBoxes(newShowBoxes);
+        };
+
+        window.addEventListener("scroll", handleScroll);
         return () => {
-            window.removeEventListener("scroll", displayContent);
+            window.removeEventListener("scroll", handleScroll);
         };
     }, []);
 
+    const addBoxRef = (ref: HTMLDivElement | null, index: number) => {
+        boxRefs.current[index] = ref;
+    };
 
     return (
         <div className="experience-section" id="timeline">
             <ul className="timeline-ul">
                 <li>
                     <i className="experience-item xp-1">2017</i>
-                    <div className="box">
+                    <div className={`box ${showBoxes[0] ? "show" : ""}`} ref={(ref) => addBoxRef(ref, 0)}>
                         <h3 className="title"><span className="year">2017</span>ENTRY 1</h3>
                         <p>content for entry 1</p>
                         <button>read more</button>
@@ -49,7 +47,7 @@ const Experience: React.FC = () => {
                 </li>
                 <li>
                     <i className="experience-item xp-2"></i>
-                    <div className="box">
+                    <div className={`box ${showBoxes[1] ? "show" : ""}`} ref={(ref) => addBoxRef(ref, 1)}>
                         <h3 className="title"><span className="year">2018</span>ENTRY 2</h3>
                         <p>content for entry 2</p>
                         <button>read more</button>
@@ -57,14 +55,13 @@ const Experience: React.FC = () => {
                 </li>
                 <li>
                     <i className="experience-item xp-3"></i>
-                    <div className="box">
+                    <div className={`box ${showBoxes[2] ? "show" : ""}`} ref={(ref) => addBoxRef(ref, 2)}>
                         <h3 className="title"><span className="year">2019</span>ENTRY 3</h3>
                         <p>content for entry 3</p>
                         <button>read more</button>
                     </div>
                 </li>
             </ul>
-
         </div>
     );
 };

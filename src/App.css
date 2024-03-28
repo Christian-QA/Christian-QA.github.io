@@ -215,10 +215,19 @@ section > * {
     background-color: #1a1a1a;
     box-shadow: 0 0 5px #ffffff;
     border-radius: 5px;
+}
+
+#timeline ul li:nth-child(odd) .box {
+    left: 50px;
     transform: translateX(400%);
 }
 
-#timeline ul li .box .show {
+#timeline ul li:nth-child(even) .box {
+    right: 500px;
+    transform: translateX(-400%);
+}
+
+#timeline ul li .box.show {
     transform: translateX(0%);
     transition: all 0.5s ease-in-out;
 }
@@ -262,14 +271,6 @@ section > * {
 #timeline button:hover {
     background-color: #1a1a1a;
     color: white;
-}
-
-#timeline ul li:nth-child(odd) .box {
-    left: 50px
-}
-
-#timeline ul li:nth-child(even) .box {
-    right: 500px
 }
 
 #timeline ul li i {
