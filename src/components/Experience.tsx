@@ -83,7 +83,7 @@ const Experience: React.FC = () => {
             <ul className="timeline-ul">
                 {headingsAndEntries.headings.map((heading, index) => (
                     <li key={index}>
-                        <i className="experience-item">{index + 2017}</i>
+                        <i className="experience-item">{2025 - index}</i>
                         <div
                             className={`box ${showBoxes[index] ? 'show' : ''}`}
                             ref={(ref) => addBoxRef(ref, index)}
