@@ -67,7 +67,7 @@ const Experience: React.FC = () => {
     useDescriptionBoxes();
 
     const headingsAndEntries = useMemo(() => {
-        const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017];
+        const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
         return years.reduce(
             (acc, year) => {
                 acc.headings.push(`experience.heading.${year}`);
@@ -95,9 +95,12 @@ const Experience: React.FC = () => {
                         </div>
                     </li>
                 ))}
+                <li className="bottom">
+                    <i className="experience-item">2017</i>
+                </li>
             </ul>
         </div>
-    );
+);
 };
 
 export default Experience;

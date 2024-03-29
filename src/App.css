@@ -199,6 +199,10 @@ section > * {
     padding: 50px 0;
 }
 
+#timeline ul .bottom {
+    padding: 0;
+}
+
 #timeline ul li {
     list-style: none;
     position: relative;
