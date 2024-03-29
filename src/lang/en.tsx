@@ -29,7 +29,12 @@ const Messages = {
 
                 "projects.header": "Personal Projects",
 
-                "contact.header": "Contact"
+                "contact.header": "Contact",
+
+                "footer.copyright-date": "2024.",
+                "footer.copyright-name": "Christian Redfern.",
+                "footer.copyright-notice": "All rights reserved."
+
             }
         }
     },

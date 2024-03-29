@@ -460,7 +460,7 @@ section > * {
 #contact .contact-form {
     align-items: center;
     justify-content: center;
-    margin: 10% 30% 30%;
+    margin: 10% 30% 0;
 }
 
 @media screen and (max-width: 1040px) {
