@@ -188,6 +188,13 @@ section > * {
     width: 100%;
 }
 
+.header {
+    background-color: rebeccapurple;
+    text-align: center;
+    font-size: 3rem;
+    box-shadow: 0 3px 3px white;
+}
+
 .experience-section {
     align-items: center;
     max-width: 100%;
@@ -240,7 +247,7 @@ section > * {
 
 #timeline .title {
     /*box-shadow: 0 5px 10px black;*/
-    padding: 1rem 0rem 1rem 0.7rem;
+    padding: 1rem 0 1rem 0.7rem;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     color: white;

@@ -80,6 +80,7 @@ const Experience: React.FC = () => {
 
     return (
         <div className="experience-section" id="timeline">
+            <h2 className="header">{t("experience.header")}</h2>
             <ul className="timeline-ul">
                 {headingsAndEntries.headings.map((heading, index) => (
                     <li key={index}>
