@@ -192,10 +192,18 @@ section > * {
     background-color: rebeccapurple;
     text-align: center;
     font-size: 3rem;
-    box-shadow: 0 3px 3px white;
+    width: 100%;
+    margin: 0;
 }
 
 .experience-section {
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 0 5%;
+}
+
+.experience-container {
     align-items: center;
     max-width: 100%;
     max-height: 100%;
@@ -377,10 +385,12 @@ section > * {
 }
 
 @media (max-width: 768px) {
-    .experience-section {
+
+    .experience-container {
         align-items: flex-start;
         width: 80px;
     }
+
 
     #timeline ul li .box {
         width: 380px;

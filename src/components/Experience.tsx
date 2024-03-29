@@ -79,27 +79,30 @@ const Experience: React.FC = () => {
     }, []);
 
     return (
-        <div className="experience-section" id="timeline">
+        <div className="experience-section">
             <h2 className="header">{t("experience.header")}</h2>
-            <ul className="timeline-ul">
-                {headingsAndEntries.headings.map((heading, index) => (
-                    <li key={index}>
-                        <i className="experience-item">{2025 - index}</i>
-                        <div className={`box ${showBoxes[index] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, index)}>
-                            <h3 className="title">{t(heading)}</h3>
-                            <div className="description-box">
-                                <p>{t(headingsAndEntries.entries[index])}</p>
-                                <button className="button">
-                                    <div className="button_front">read more</div>
-                                </button>
-                            </div>
-                        </div>
-                    </li>
-                ))}
-                <li className="bottom">
-                    <i className="experience-item">2017</i>
-                </li>
-            </ul>
+                <div className="experience-container" id="timeline">
+                    <ul className="timeline-ul">
+                        {headingsAndEntries.headings.map((heading, index) => (
+                            <li key={index}>
+                                <i className="experience-item">{2025 - index}</i>
+                                <div className={`box ${showBoxes[index] ? 'show' : ''}`}
+                                     ref={(ref) => addBoxRef(ref, index)}>
+                                    <h3 className="title">{t(heading)}</h3>
+                                    <div className="description-box">
+                                        <p>{t(headingsAndEntries.entries[index])}</p>
+                                        <button className="button">
+                                            <div className="button_front">read more</div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        ))}
+                        <li className="bottom">
+                            <i className="experience-item">2017</i>
+                        </li>
+                    </ul>
+                </div>
         </div>
 );
 };
