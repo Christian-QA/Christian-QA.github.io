@@ -27,7 +27,9 @@ const Messages = {
                 "experience.read-less": "Read Less",
 
 
-                "projects.header": "Personal Projects"
+                "projects.header": "Personal Projects",
+
+                "contact.header": "Contact"
             }
         }
     },
