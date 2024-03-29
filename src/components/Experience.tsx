@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import i18n from "i18next";
-import { initReactI18next } from "react-i18next";
-import Messages from "../lang/en.tsx";
+import i18n from 'i18next';
+import { initReactI18next } from 'react-i18next';
+import Messages from '../lang/en.tsx';
 
-i18n
-    .use(initReactI18next)
-    .init(Messages);
+i18n.use(initReactI18next).init(Messages);
 
 const Experience: React.FC = () => {
     const [showBoxes, setShowBoxes] = useState<boolean[]>([]);
@@ -24,9 +22,9 @@ const Experience: React.FC = () => {
             setShowBoxes(newShowBoxes);
         };
 
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
@@ -34,31 +32,73 @@ const Experience: React.FC = () => {
         boxRefs.current[index] = ref;
     };
 
+    const descriptionBoxes = useRef<HTMLDivElement[]>([]);
+
+    useEffect(() => {
+        // Loop through all description box elements with the desired class
+        const elements = document.querySelectorAll(".description-box");
+
+        elements.forEach((element) => {
+            const button = element.querySelector("#timeline button");
+            if (button) {
+                const handleClick = () => {
+                    element.classList.toggle("active");
+                    button.classList.toggle("active_button");
+
+                    button.innerHTML = button.classList.contains("active_button")
+                        ? "Read Less"
+                        : "Read More";
+                };
+                button.addEventListener("click", handleClick);
+
+                // Cleanup function to remove event listener on unmount
+                return () => button.removeEventListener("click", handleClick);
+            }
+        });
+    }, [descriptionBoxes.current]); // Dependency on descriptionBoxes
+
+
     return (
         <div className="experience-section" id="timeline">
             <ul className="timeline-ul">
                 <li>
                     <i className="experience-item xp-1">2017</i>
-                    <div className={`box ${showBoxes[0] ? "show" : ""}`} ref={(ref) => addBoxRef(ref, 0)}>
-                        <h3 className="title"><span className="year">2017</span>ENTRY 1</h3>
-                        <p>content for entry 1</p>
-                        <button>read more</button>
+                    <div className={`box ${showBoxes[0] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, 0)}>
+                        <h3 className="title">ENTRY 1</h3>
+                        <div className="description-box">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <button className="button">read more</button>
+                        </div>
                     </div>
                 </li>
                 <li>
                     <i className="experience-item xp-2"></i>
-                    <div className={`box ${showBoxes[1] ? "show" : ""}`} ref={(ref) => addBoxRef(ref, 1)}>
-                        <h3 className="title"><span className="year">2018</span>ENTRY 2</h3>
-                        <p>content for entry 2</p>
-                        <button>read more</button>
+                    <div className={`box ${showBoxes[1] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, 1)}>
+                        <h3 className="title">ENTRY 2</h3>
+                        <div className="description-box">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est laborum.</p>
+                            <button className="button">read more</button>
+                        </div>
                     </div>
                 </li>
                 <li>
                     <i className="experience-item xp-3"></i>
-                    <div className={`box ${showBoxes[2] ? "show" : ""}`} ref={(ref) => addBoxRef(ref, 2)}>
-                        <h3 className="title"><span className="year">2019</span>ENTRY 3</h3>
-                        <p>content for entry 3</p>
-                        <button>read more</button>
+                    <div className={`box ${showBoxes[2] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, 2)}>
+                        <h3 className="title">ENTRY 3</h3>
+                        <div className="description-box">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                est laborum.</p>
+                            <button className="button">read more</button>
+                        </div>
                     </div>
                 </li>
             </ul>

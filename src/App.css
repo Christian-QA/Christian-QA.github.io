@@ -216,6 +216,7 @@ section > * {
     box-shadow: 0 0 5px #ffffff;
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
+    overflow-y: auto;
 }
 
 #timeline ul li:nth-child(odd) .box {
@@ -233,8 +234,6 @@ section > * {
     transition: all 0.5s ease-in-out;
 }
 
-
-
 #timeline .title {
     /*box-shadow: 0 5px 10px black;*/
     padding: 1rem 0rem 1rem 0.7rem;
@@ -246,32 +245,67 @@ section > * {
 }
 
 #timeline .year {
-    background-color: white;
+    background-color: aqua;
     padding: 0.2rem 0.8rem;
     border-radius: 10px;
-    color: aqua;
+    color: black;
     font-size:0.9rem;
     margin: 0 0.5rem;
 }
 
+#timeline .description-box {
+    height: 200px;
+    overflow: hidden;
+    line-height: 1.5;
+    padding: 10px 0;
+    position: relative;
+
+}
+
+#timeline .description-box.active {
+    height: auto;
+    padding-bottom: 0;
+}
+
 #timeline p {
     padding: 1rem 0 1rem 1rem;
+    overflow: auto;
 }
 
 #timeline button {
-    margin: 0.5rem 0 1rem 1rem;
-    outline: none;
-    border: 1px solid grey;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    background: transparent;
-    transition: all 0.3s ease-in;
-    cursor: pointer
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    border: none;
+    font-weight: bold;
+    background-color: rebeccapurple;
+    padding: 20px 0;
 }
 
 #timeline button:hover {
-    background-color: #1a1a1a;
-    color: white;
+    color: aqua;
+}
+
+#timeline button:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    background: linear-gradient(180deg, #1a1a1a, #6e8ba2, aqua);
+    z-index: -1;
+}
+
+#timeline .active_button {
+    position: unset;
+    width: 100%;
+}
+
+#timeline .active_button:after {
+    background: transparent;
 }
 
 #timeline ul li i {
