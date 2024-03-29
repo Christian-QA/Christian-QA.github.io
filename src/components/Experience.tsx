@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import {initReactI18next, useTranslation} from 'react-i18next';
 import Messages from '../lang/en.tsx';
 
 i18n.use(initReactI18next).init(Messages);
 
 const Experience: React.FC = () => {
+    const { t } = useTranslation();
+
     const [showBoxes, setShowBoxes] = useState<boolean[]>([]);
     const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -47,8 +49,8 @@ const Experience: React.FC = () => {
                     button.classList.toggle("active_button");
 
                     buttonFront.innerHTML = buttonFront.classList.contains("active_button")
-                        ? "Read Less"
-                        : "Read More";
+                        ? t('experience.read-less')
+                        : t('experience.read-more');
                 };
                 button.addEventListener("click", handleClick);
 
@@ -58,56 +60,34 @@ const Experience: React.FC = () => {
         });
     }, [descriptionBoxes.current]); // Dependency on descriptionBoxes
 
+    const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017]
+
+    const headings: string[] = []
+    const entries: string[] = []
+
+    years.forEach(year => {
+        headings.push(`experience.heading.${year}`);
+        entries.push(`experience.entry.${year}`);
+        console.log(year);
+    });
 
     return (
         <div className="experience-section" id="timeline">
             <ul className="timeline-ul">
-                <li>
-                    <i className="experience-item xp-1">2025</i>
-                    <div className={`box ${showBoxes[0] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, 0)}>
-                        <h3 className="title">ENTRY 1</h3>
-                        <div className="description-box">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <button className="button">
-                                <div className="button_front">read more</div>
-                            </button>
+                {years.map((year, index) => (
+                    <li key={index}>
+                        <i className="experience-item">{year}</i>
+                        <div className={`box ${showBoxes[index] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, index)}>
+                            <h3 className="title">{t(headings[index])}</h3>
+                            <div className="description-box">
+                                <p>{t(entries[index])}</p>
+                                <button className="button">
+                                    <div className="button_front">read more</div>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li>
-                    <i className="experience-item xp-2"></i>
-                    <div className={`box ${showBoxes[1] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, 1)}>
-                        <h3 className="title">ENTRY 2</h3>
-                        <div className="description-box">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.</p>
-                            <button className="button">
-                                <div className="button_front">read more</div>
-                            </button>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <i className="experience-item xp-3"></i>
-                    <div className={`box ${showBoxes[2] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, 2)}>
-                        <h3 className="title">ENTRY 3</h3>
-                        <div className="description-box">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                est laborum.</p>
-                            <button className="button">
-                                <div className="button_front">read more</div>
-                            </button>
-                        </div>
-                    </div>
-                </li>
+                    </li>
+                ))}
             </ul>
         </div>
     );
