@@ -84,10 +84,7 @@ const Experience: React.FC = () => {
                 {headingsAndEntries.headings.map((heading, index) => (
                     <li key={index}>
                         <i className="experience-item">{2025 - index}</i>
-                        <div
-                            className={`box ${showBoxes[index] ? 'show' : ''}`}
-                            ref={(ref) => addBoxRef(ref, index)}
-                        >
+                        <div className={`box ${showBoxes[index] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, index)}>
                             <h3 className="title">{t(heading)}</h3>
                             <div className="description-box">
                                 <p>{t(headingsAndEntries.entries[index])}</p>
