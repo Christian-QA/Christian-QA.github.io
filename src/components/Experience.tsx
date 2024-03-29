@@ -61,7 +61,7 @@ const useDescriptionBoxes = () => {
     }, [t]);
 };
 
-const Experience: React.FC = () => {
+const Experience: React.FC = () => { // TODO - Fix random right scroll
     const { t } = useTranslation();
     const { showBoxes, addBoxRef } = useShowBoxes();
     useDescriptionBoxes();
@@ -79,7 +79,7 @@ const Experience: React.FC = () => {
     }, []);
 
     return (
-        <div className="experience-section">
+        <div className="section-content">
             <h2 className="header">{t("experience.header")}</h2>
                 <div className="experience-container" id="timeline">
                     <ul className="timeline-ul">

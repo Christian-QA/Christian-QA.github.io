@@ -25,6 +25,9 @@ const Messages = {
 
                 "experience.read-more": "Read More",
                 "experience.read-less": "Read Less",
+
+
+                "projects.header": "Personal Projects"
             }
         }
     },

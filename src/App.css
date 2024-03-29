@@ -81,9 +81,10 @@ footer {
 
 /* Content styles */
 section > * {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0;
     background-color: #2a2b2f;
+    padding-bottom: 30px;
 }
 
 .about-section {
@@ -407,5 +408,51 @@ section > * {
 
     #timeline ul li:nth-child(even) .box {
         left: 40px;
+    }
+}
+
+#projects .projects-grid {
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+
+#projects .row-grid {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+/* Create four equal columns that sits next to each other */
+#projects .column-grid {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+#projects .column-grid img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    #projects .column-grid {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    #projects .column-grid {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
 }
