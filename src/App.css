@@ -337,15 +337,12 @@ section > * {
 }
 
 #timeline ul li:nth-child(odd) .box:before {
-    left: -25px;
-    border-width: 8px 16px 8px 0;
-    border-color: transparent aqua;
+    border-color: transparent;
 }
 
 #timeline ul li:nth-child(even) .box:before {
-    right: -25px;
-    border-width: 8px 0 8px 16px;
-    border-color: transparent aqua;
+
+    border-color: transparent;
 }
 
 @media (max-width: 1040px) {
