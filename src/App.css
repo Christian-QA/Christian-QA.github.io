@@ -296,20 +296,20 @@ section > * {
 #timeline .box:before {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 75px;
     width: 0;
     right: 0;
     border-style: solid;
 }
 
 #timeline ul li:nth-child(odd) .box:before {
-    left: -15px;
+    left: -25px;
     border-width: 8px 16px 8px 0;
     border-color: transparent aqua;
 }
 
 #timeline ul li:nth-child(even) .box:before {
-    right: -15px;
+    right: -25px;
     border-width: 8px 0 8px 16px;
     border-color: transparent aqua;
 }
