@@ -13,7 +13,7 @@ const About: React.FC = () => {
     return (
         <section className="about-section">
             <div className="image-container">
-                <img src="/src/assets/portfolio_image.jpg" alt="me" className="portfolio-image"></img>
+                <img src="/src/assets/portfolio_image.png" alt="me" className="portfolio-image"></img>
                     <div className="text-overlay">
                         <h2>{t('about.title')}</h2>
                         <p className="subtitle">{t('about.subtitle')}</p>
@@ -26,7 +26,7 @@ const About: React.FC = () => {
                 <div className="about-story">
                     <p>{t('about.paragraphOne')}</p>
                     <br></br>
-                    <p>{t('about.paragraphTwo')}.</p>
+                    <p>{t('about.paragraphTwo')}</p>
                 </div>
                 <div className="row-grid">
                     <div className="column-grid">

@@ -10,13 +10,14 @@
 body {
     font-family: Montserrat, sans-serif;
     line-height: 1.6;
+    background-color: #050505;
 }
 
 header {
     background-color: rebeccapurple;
     color: #fff;
     padding: 1rem;
-    max-width: 50%;
+    max-width: 100%;
     left: 0;
     position: fixed;
     z-index: 1000;
@@ -82,6 +83,7 @@ footer {
 section > * {
     max-width: 1200px;
     margin: 0;
+    background-color: #2a2b2f;
 }
 
 .about-section {
@@ -90,15 +92,15 @@ section > * {
     align-items: center;
     max-width: 100%;
     max-height: 100%;
-    margin: 0 auto;
-    padding: 0 0 5%;
+    margin: 0 0 5%;
 }
 
 .image-container {
     flex: 0 0 50%;
     max-width: 50%;
-    max-height: 100%;
+    max-height: 200%;
     position: relative;
+    background-color: white;
 }
 
 .image-placeholder { /* TODO - Delete later */
@@ -108,8 +110,7 @@ section > * {
 }
 
 .portfolio-image {
-    width: 100%;
-    height: auto;
+    height: 200%;
 }
 
 .about-cutoff {
@@ -187,3 +188,224 @@ section > * {
     width: 100%;
 }
 
+.header {
+    background-color: rebeccapurple;
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+    margin: 0;
+}
+
+.experience-section {
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 0 5%;
+}
+
+.experience-container {
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 0 5%;
+}
+
+#timeline ul {
+    padding: 50px 0;
+}
+
+#timeline ul .bottom {
+    padding: 0;
+}
+
+#timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 7px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: rebeccapurple;
+}
+
+#timeline ul li .box {
+    position: relative;
+    bottom: 0;
+    width: 450px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 5px #ffffff;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+}
+
+#timeline ul li:nth-child(odd) .box {
+    left: 50px;
+    transform: translateX(400%);
+}
+
+#timeline ul li:nth-child(even) .box {
+    right: 500px;
+    transform: translateX(-400%);
+}
+
+#timeline ul li .box.show {
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+}
+
+#timeline .title {
+    /*box-shadow: 0 5px 10px black;*/
+    padding: 1rem 0 1rem 0.7rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: white;
+    font-size: 1.3rem;
+    background-color: rebeccapurple;
+}
+
+#timeline .year {
+    background-color: aqua;
+    padding: 0.2rem 0.8rem;
+    border-radius: 10px;
+    color: black;
+    font-size:0.9rem;
+    margin: 0 0.5rem;
+}
+
+#timeline .description-box {
+    height: 200px;
+    overflow: hidden;
+    line-height: 1.5;
+    padding: 10px 0;
+    position: relative;
+}
+
+#timeline .description-box.active {
+    height: auto;
+    padding-bottom: 0;
+}
+
+#timeline p {
+    padding: 1rem 0 1rem 1rem;
+    overflow: auto;
+}
+
+#timeline button {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    border: none;
+    font-weight: bold;
+    background-color: rebeccapurple;
+    padding: 20px 0;
+}
+
+#timeline .button_front {
+    position: absolute;
+    right: 50px;
+    left: 50px;
+    bottom: 8px;
+    border-radius: 90px;
+    border: 2px solid #542880;
+    font-weight: bold;
+}
+
+#timeline button:hover {
+    color: aqua;
+}
+
+#timeline button:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    /*background: linear-gradient(180deg, #1a1a1a, #6e8ba2, aqua);*/
+    z-index: -1;
+}
+
+#timeline .active_button {
+    position: unset;
+    width: 100%;
+}
+
+#timeline .active_button:after {
+    background: transparent;
+}
+
+#timeline ul li i {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background: #1a1a1a;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+#timeline .experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: aqua;
+}
+
+#timeline .box:before {
+    content: "";
+    position: absolute;
+    top: 75px;
+    width: 0;
+    right: 0;
+    border-style: solid;
+}
+
+#timeline ul li:nth-child(odd) .box:before {
+    border-color: transparent;
+}
+
+#timeline ul li:nth-child(even) .box:before {
+
+    border-color: transparent;
+}
+
+@media (max-width: 1040px) {
+    #timeline ul li .box {
+        width: 320px;
+    }
+
+    /* TODO - Find a way to make shrinking transition more seamless */
+    #timeline ul li:nth-child(even) .box {
+        left: -370px
+    }
+}
+
+@media (max-width: 768px) {
+
+    .experience-container {
+        align-items: flex-start;
+        width: 80px;
+    }
+
+
+    #timeline ul li .box {
+        width: 380px;
+    }
+
+    #timeline ul li:nth-child(even) .box:before {
+        left: -15px;
+        border-color: transparent aqua;
+    }
+
+    #timeline ul li:nth-child(odd) .box {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: 40px;
+    }
+}
