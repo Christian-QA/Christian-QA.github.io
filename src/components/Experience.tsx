@@ -40,12 +40,13 @@ const Experience: React.FC = () => {
 
         elements.forEach((element) => {
             const button = element.querySelector("#timeline button");
+            const buttonFront = element.querySelector("#timeline .button_front");
             if (button) {
                 const handleClick = () => {
                     element.classList.toggle("active");
                     button.classList.toggle("active_button");
 
-                    button.innerHTML = button.classList.contains("active_button")
+                    buttonFront.innerHTML = buttonFront.classList.contains("active_button")
                         ? "Read Less"
                         : "Read More";
                 };
@@ -62,12 +63,12 @@ const Experience: React.FC = () => {
         <div className="experience-section" id="timeline">
             <ul className="timeline-ul">
                 <li>
-                    <i className="experience-item xp-1">2017</i>
+                    <i className="experience-item xp-1">2025</i>
                     <div className={`box ${showBoxes[0] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, 0)}>
                         <h3 className="title">ENTRY 1</h3>
                         <div className="description-box">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <button className="button">read more</button>
+                            <button className="button"><div className="button_front">read more</div></button>
                         </div>
                     </div>
                 </li>
@@ -82,7 +83,7 @@ const Experience: React.FC = () => {
                                 reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
                                 sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
                                 est laborum.</p>
-                            <button className="button">read more</button>
+                            <div className="button_back"><button className="button">read more</button></div>
                         </div>
                     </div>
                 </li>

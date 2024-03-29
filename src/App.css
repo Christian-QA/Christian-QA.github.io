@@ -284,6 +284,16 @@ section > * {
     padding: 20px 0;
 }
 
+#timeline .button_front {
+    position: absolute;
+    right: 50px;
+    left: 50px;
+    bottom: 8px;
+    border-radius: 90px;
+    border: 2px solid #542880;
+    font-weight: bold;
+}
+
 #timeline button:hover {
     color: aqua;
 }
@@ -295,7 +305,7 @@ section > * {
     left: 0;
     bottom: 0;
     height: 80px;
-    background: linear-gradient(180deg, #1a1a1a, #6e8ba2, aqua);
+    /*background: linear-gradient(180deg, #1a1a1a, #6e8ba2, aqua);*/
     z-index: -1;
 }
 
