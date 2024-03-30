@@ -463,6 +463,17 @@ section > * {
     margin: 10% 30% 0;
 }
 
+.confirmation-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.confirmation-text {
+    text-align: center;
+}
+
 @media screen and (max-width: 1040px) {
     #contact .contact-form {
         align-items: center;
