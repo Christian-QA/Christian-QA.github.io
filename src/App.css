@@ -1,6 +1,18 @@
 /* Reset some default styles */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --purple: rebeccapurple;
+    --aqua: aqua;
+    --white: white;
+    --black: black;
+    --off-white: #efefef;
+    --text-container-colour: rgb(23, 23, 23);
+    --background: #2a2b2f;
+    --above-background: rgba(255, 255, 255, 0.05);
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,12 +22,13 @@
 body {
     font-family: Montserrat, sans-serif;
     line-height: 1.6;
-    background-color: #050505;
+    background-color: var(--background);
+    overflow-x: hidden;
 }
 
 header {
-    background-color: rebeccapurple;
-    color: #fff;
+    background-color: var(--purple);
+    color: var(--white);
     padding: 1rem;
     max-width: 100%;
     left: 0;
@@ -73,8 +86,8 @@ form textarea {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--background);
+    color: var(--white);
     padding: 1rem;
     text-align: center;
 }
@@ -83,8 +96,59 @@ footer {
 section > * {
     max-width: 100%;
     margin: 0;
-    background-color: #2a2b2f;
+    background-color: transparent;
     padding-bottom: 30px;
+}
+
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing-text {
+    padding-top: 25vh;
+    text-align: center;
+}
+
+.tagline {
+    text-align: center;
+    padding-top: 50px;
+    max-width: 400px;
+}
+
+.language-grid {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+}
+
+.language-container {
+    width: 150px;
+    height: 150px;
+    background-color: var(--above-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-image {
+    width: 80%;
+    height: auto;
+}
+
+.language-image.typescript {
+    background-color: black;
+}
+
+@media (min-width: 300px) {
+    .language-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .language-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 .about-section {
@@ -101,7 +165,7 @@ section > * {
     max-width: 50%;
     max-height: 200%;
     position: relative;
-    background-color: white;
+    background-color: var(--white);
 }
 
 .image-placeholder { /* TODO - Delete later */
@@ -117,7 +181,7 @@ section > * {
 .about-cutoff {
     width: 100%;
     padding-bottom: 5%;
-    background-color: #ffffff;
+    background-color: var(--white);
     position: relative;
 }
 
@@ -127,7 +191,7 @@ section > * {
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent black overlay */
-    color: white;
+    color: var(--white);
     text-align: center;
 }
 
@@ -135,15 +199,15 @@ section > * {
     flex: 0 0 45%;
     max-width: 45%;
     padding: 1em;
-    background-color: #efefef;
-    color: #1a1a1a;
+    background-color: var(--off-white);
+    color: var(--text-container-colour);
 }
 
 .about-me {
     width: 100%;
     text-align: center;
-    color: white;
-    background-color: rebeccapurple;
+    color: var(--white);
+    background-color: var(--purple);
     position: relative;
     padding: 2%;
 }
@@ -172,7 +236,7 @@ section > * {
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px;
-    background-color: #ffffff;
+    background-color: var(--white);
 }
 
 /* Create four equal columns that sits next to each other */
@@ -190,7 +254,7 @@ section > * {
 }
 
 .header {
-    background-color: rebeccapurple;
+    background-color: var(--purple);
     text-align: center;
     font-size: 3rem;
     width: 100%;
@@ -225,15 +289,15 @@ section > * {
     width: 7px;
     margin: 0 auto;
     padding-top: 50px;
-    background-color: rebeccapurple;
+    background-color: var(--purple);
 }
 
 #timeline ul li .box {
     position: relative;
     bottom: 0;
     width: 450px;
-    background-color: #1a1a1a;
-    box-shadow: 0 0 5px #ffffff;
+    background-color: var(--text-container-colour);
+    box-shadow: 0 0 5px var(--white);
     border-radius: 5px;
     transition: all 0.5s ease-in-out;
     overflow-y: auto;
@@ -259,16 +323,16 @@ section > * {
     padding: 1rem 0 1rem 0.7rem;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    color: white;
+    color: var(--white);
     font-size: 1.3rem;
-    background-color: rebeccapurple;
+    background-color: var(--purple);
 }
 
 #timeline .year {
-    background-color: aqua;
+    background-color: var(--aqua);
     padding: 0.2rem 0.8rem;
     border-radius: 10px;
-    color: black;
+    color: var(--black);
     font-size:0.9rem;
     margin: 0 0.5rem;
 }
@@ -299,7 +363,7 @@ section > * {
     border-radius: 0;
     border: none;
     font-weight: bold;
-    background-color: rebeccapurple;
+    background-color: var(--purple);
     padding: 20px 0;
 }
 
@@ -309,12 +373,12 @@ section > * {
     left: 50px;
     bottom: 8px;
     border-radius: 90px;
-    border: 2px solid #542880;
+    border: 2px solid var(--purple);
     font-weight: bold;
 }
 
 #timeline button:hover {
-    color: aqua;
+    color: var(--aqua);
 }
 
 #timeline button:after {
@@ -343,7 +407,7 @@ section > * {
     top: 0;
     width: 45px;
     height: 45px;
-    background: #1a1a1a;
+    background: var(--text-container-colour);
     transform: translateX(-50%);
     border-radius: 50%;
 }
@@ -353,7 +417,7 @@ section > * {
     align-items: center;
     justify-content: center;
     font-size: 1.7rem;
-    color: aqua;
+    color: var(--aqua);
 }
 
 #timeline .box:before {
@@ -399,7 +463,7 @@ section > * {
 
     #timeline ul li:nth-child(even) .box:before {
         left: -15px;
-        border-color: transparent aqua;
+        border-color: transparent var(--aqua);
     }
 
     #timeline ul li:nth-child(odd) .box {
