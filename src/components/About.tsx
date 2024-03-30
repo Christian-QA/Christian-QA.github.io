@@ -26,25 +26,6 @@ const About: React.FC = () => {
                     <br></br>
                     <p>{t('about.paragraphTwo')}</p>
                 </div>
-                <div className="row-grid">
-                    <div className="column-grid">
-                        <img src="/src/assets/language-logos/scala-ar21.svg" alt="scala"/>
-                        <img src="/src/assets/language-logos/java-ar21.svg" alt="java"/>
-                        <img src="/src/assets/language-logos/kotlinlang-ar21.svg" alt="typescript"/>
-                    </div>
-                    <div className="column-grid">
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
-                        <img src="/src/assets/language-logos/dartlang-official.svg" alt="dart"/>
-                    </div>
-                    <div className="column-grid">
-                        <img src="/src/assets/language-logos/typescriptlang-icon.svg" alt="javascript"/>
-                        <img src="/src/assets/language-logos/python-official.svg" alt="python"/>
-                    </div>
-                    <div className="column-grid">
-                        <img src="/src/assets/language-logos/w3_html5-ar21.svg" alt="html"/>
-                        <img src="/src/assets/language-logos/w3_css-ar21.svg" alt="css"/>
-                    </div>
-                </div>
             </div>
         </div>
     );
