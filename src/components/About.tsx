@@ -11,7 +11,7 @@ const About: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="about-section">
+        <div className="section-content">
             <div className="image-container">
                 <img src="/src/assets/portfolio_image.png" alt="me" className="portfolio-image"></img>
                     <div className="text-overlay">
@@ -48,7 +48,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 
