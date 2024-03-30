@@ -36,11 +36,14 @@ const Contact: React.FC = () => {
             </div>
             <form className="contact-form" id="contact" ref={form} onSubmit={sendEmail}>
                 <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="from_name" required />
+                <input type="text" id="name" name="from_name" required minLength={2} maxLength={50}
+                       pattern="[A-Za-z\s]+" title="Please enter a valid name (only letters and spaces)"/>
                 <label htmlFor="email">Email:</label>
-                <input type="email" id="email" name="from_email" required />
+                <input type="email" id="email" name="from_email" required
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"/>
                 <label htmlFor="message">Message:</label>
-                <textarea id="message" name="message" rows={15} required />
+                <textarea id="message" name="message" rows={15} required minLength={10} maxLength={500}
+                          title="Please enter a message between 10 and 500 characters"></textarea>
                 <button type="submit" value="Send">Send Message</button>
             </form>
         </div>
