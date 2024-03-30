@@ -109,17 +109,60 @@ section > * {
     width: 450px;
 }
 
-.language-images {
+.language-image {
     position: relative; /* Enable positioning for the image */
-    background-color: #F0F0F0; /* Set the background color (optional) */
-    padding: 10px;  /* Add padding for spacing (optional) */
 }
 
-.language-images img {
+.language-image img {
+    width: 280px;
+}
+
+.language-image.first img {
     position: absolute; /* Make the image positioned within the container */
-    top: 200px;
-    left: 200px;
-    transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
+    top: 60vh;
+    left: 43%;
+}
+
+.language-image.second img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 400px;
+    left: 300px;
+}
+
+.language-image.third img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 400px;
+    left: 300px;
+}
+
+.language-image.fourth img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 400px;
+    left: 300px;
+}
+
+.language-image.fifth img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 400px;
+    left: 300px;
+}
+
+.language-image.sixth img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 400px;
+    left: 300px;
+}
+
+.language-image.seventh img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 400px;
+    left: 300px;
+}
+
+.language-image.eighth img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 400px;
+    left: 300px;
 }
 
 
