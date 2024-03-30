@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, {useRef, useState} from 'react';
 import { useTranslation } from "react-i18next";
 import emailjs from '@emailjs/browser';
 
@@ -7,9 +7,11 @@ const Contact: React.FC = () => {
     const form = useRef<HTMLFormElement>(null);
     const confirmation = useRef<HTMLDivElement>(null);
     const error = useRef<HTMLDivElement>(null);
+    const [isDisabled, setIsDisabled] = useState(false);
 
     const sendEmail = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
+        setIsDisabled(true);
         emailjs
             .sendForm('service_kcq9eve', 'template_a79ze1b', form.current, {
                 publicKey: '4C9NhAMkXGZnLE75c',
@@ -53,7 +55,7 @@ const Contact: React.FC = () => {
                 <label htmlFor="message">{t("contact.message")}</label>
                 <textarea id="message" name="message" rows={15} required minLength={10} maxLength={500}
                           title="Please enter a message between 10 and 500 characters"></textarea>
-                <button type="submit" value="Send">{t("contact.send")}</button>
+                <button type="submit" value="Send" disabled={isDisabled}>{t("contact.send")}</button>
             </form>
         </div>
     );
