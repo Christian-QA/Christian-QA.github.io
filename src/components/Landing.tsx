@@ -12,11 +12,12 @@ const Landing: React.FC = () => {
 
     return (
         <div className="section-content">
+            <img src="/src/assets/language-logos/scala-ar21.svg" alt="scala"/>
             <div className="landing-container">
                 <div className="landing-text">
-                    <h2>{t('about.title')}</h2>
-                    <p className="subtitle">{t('about.subtitle')}</p>
-                    <p className="tagline">{t('about.tagline')}</p>
+                    <h2>{t('landing.title')}</h2>
+                    <p className="subtitle">{t('landing.subtitle')}</p>
+                    <p className="tagline">{t('landing.tagline')}</p>
                 </div>
             </div>
         </div>
