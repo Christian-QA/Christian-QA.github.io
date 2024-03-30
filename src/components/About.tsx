@@ -12,13 +12,14 @@ const About: React.FC = () => {
 
     return (
         <div className="section-content">
+            <h2 className="header">{t("about.header")}</h2>
             <div className="image-container">
                 <img src="/src/assets/portfolio_image.png" alt="me" className="portfolio-image"></img>
-                    <div className="text-overlay">
-                        <h2>{t('about.title')}</h2>
-                        <p className="subtitle">{t('about.subtitle')}</p>
-                        <p className="tagline">{t('about.tagline')}</p>
-                    </div>
+                <div className="text-overlay">
+                    <h2>{t('about.title')}</h2>
+                    <p className="subtitle">{t('about.subtitle')}</p>
+                    <p className="tagline">{t('about.tagline')}</p>
+                </div>
 
             </div>
             <div className="text-container">

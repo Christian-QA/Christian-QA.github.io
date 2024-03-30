@@ -7,6 +7,7 @@ const Messages = {
                 "header.projects": "Projects",
                 "header.contact": "Contact",
 
+                "about.header": "About Me",
                 "about.title": "Christian Redfern",
                 "about.subtitle": "Full Stack Developer",
                 "about.tagline": "Heyo, welcome to my portfolio website!",

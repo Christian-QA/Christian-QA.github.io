@@ -10,7 +10,7 @@
 body {
     font-family: Montserrat, sans-serif;
     line-height: 1.6;
-    background-color: #050505;
+    background-color: #2a2b2f;
 }
 
 header {
@@ -83,7 +83,7 @@ footer {
 section > * {
     max-width: 100%;
     margin: 0;
-    background-color: #2a2b2f;
+    background-color: transparent;
     padding-bottom: 30px;
 }
 
