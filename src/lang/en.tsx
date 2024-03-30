@@ -31,6 +31,21 @@ const Messages = {
 
                 "contact.header": "Contact",
 
+                "contact.name": "Your preferred name:",
+                "contact.email": "Your email:",
+                "contact.message": "Message:",
+                "contact.send": "Send Message",
+
+
+                "contact.confirmation-head": "Thank you for your message!",
+                "contact.confirmation-body": "I'll get back to you soon through email",
+                "contact.error-head": "Sorry, something went wrong on my end",
+                "contact.error-body": "Please refresh and try again, or reach out to me on Upwork or LinkedIn",
+
+
+
+
+
                 "footer.copyright-date": "2024.",
                 "footer.copyright-name": "Christian Redfern.",
                 "footer.copyright-notice": "All rights reserved."

@@ -474,6 +474,17 @@ section > * {
     text-align: center;
 }
 
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.error-text {
+    text-align: center;
+}
+
 @media screen and (max-width: 1040px) {
     #contact .contact-form {
         align-items: center;

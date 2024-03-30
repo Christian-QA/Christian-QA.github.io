@@ -6,6 +6,7 @@ const Contact: React.FC = () => {
     const { t } = useTranslation();
     const form = useRef<HTMLFormElement>(null);
     const confirmation = useRef<HTMLDivElement>(null);
+    const error = useRef<HTMLDivElement>(null);
 
     const sendEmail = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -20,6 +21,8 @@ const Contact: React.FC = () => {
                     console.log('SUCCESS!');
                 },
                 (error) => {
+                    if (form.current) form.current.style.display = "none";
+                    if (confirmation.current) confirmation.current.style.display = "flex";
                     console.log('FAILED...', error.text);
                 },
             );
@@ -28,23 +31,29 @@ const Contact: React.FC = () => {
     return (
         <div className="section-content">
             <h2 className="header">{t("contact.header")}</h2>
-            <div className="confirmation-container" style={{ display: "none" }} ref={confirmation}>
+            <div className="confirmation-container" style={{display: "none"}} ref={confirmation}>
                 <div className="confirmation-text">
-                    <h3>Thank you for your message!</h3>
-                    <p>I'll get back to you soon</p>
+                    <h3>{t("contact.confirmation-head")}</h3>
+                    <p>{t("contact.confirmation-body")}</p>
+                </div>
+            </div>
+            <div className="error-container" style={{display: "none"}} ref={error}>
+                <div className="error-container">
+                    <h3>{t("contact.error-head")}</h3>
+                    <p>{t("contact.error-body")}</p>
                 </div>
             </div>
             <form className="contact-form" id="contact" ref={form} onSubmit={sendEmail}>
-                <label htmlFor="name">Name:</label>
+                <label htmlFor="name">{t("contact.name")}</label>
                 <input type="text" id="name" name="from_name" required minLength={2} maxLength={50}
                        pattern="[A-Za-z\s]+" title="Please enter a valid name (only letters and spaces)"/>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">{t("contact.email")}</label>
                 <input type="email" id="email" name="from_email" required
                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address"/>
-                <label htmlFor="message">Message:</label>
+                <label htmlFor="message">{t("contact.message")}</label>
                 <textarea id="message" name="message" rows={15} required minLength={10} maxLength={500}
                           title="Please enter a message between 10 and 500 characters"></textarea>
-                <button type="submit" value="Send">Send Message</button>
+                <button type="submit" value="Send">{t("contact.send")}</button>
             </form>
         </div>
     );

@@ -92,7 +92,7 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
                                     <div className="description-box">
                                         <p>{t(headingsAndEntries.entries[index])}</p>
                                         <button className="button">
-                                            <div className="button_front">read more</div>
+                                            <div className="button_front">{t("experience.read-more")}</div>
                                         </button>
                                     </div>
                                 </div>
