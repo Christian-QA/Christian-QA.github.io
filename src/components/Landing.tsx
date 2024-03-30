@@ -40,7 +40,7 @@ const Landing: React.FC = () => {
                     </div>
                     <div className="language-container">
                         <img src="/src/assets/language-logos/typescriptlang-icon.svg" alt="typescript"
-                             className="language-image"/>
+                             className="language-image typescript"/>
                     </div>
                     <div className="language-container">
                         <img src="/src/assets/language-logos/w3_html5-ar21.svg" alt="html" className="language-image"/>
@@ -48,9 +48,7 @@ const Landing: React.FC = () => {
                     <div className="language-container">
                         <img src="/src/assets/language-logos/w3_css-ar21.svg" alt="css" className="language-image"/>
                     </div>
-                    <div className="language-container">
-                        <img src="/src/assets/language-logos/python-official.svg" alt="css" className="language-image"/>
-                    </div>
+                {/*    TODO - Add Python and Swift when the respective projects have released work */}
                 </div>
             </div>
         </div>
