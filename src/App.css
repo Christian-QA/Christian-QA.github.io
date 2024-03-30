@@ -105,6 +105,59 @@ section > * {
     max-width: 400px;
 }
 
+.language-grid {
+    width: 450px;
+}
+
+.language-images {
+    position: relative; /* Enable positioning for the image */
+    background-color: #F0F0F0; /* Set the background color (optional) */
+    padding: 10px;  /* Add padding for spacing (optional) */
+}
+
+.language-images img {
+    position: absolute; /* Make the image positioned within the container */
+    top: 200px;
+    left: 200px;
+    transform: translate(-50%, -50%); /* Center the image horizontally and vertically */
+}
+
+
+#languages .projects-grid {
+    margin: 50px;
+}
+
+#languages .row-grid {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+/* Create four equal columns that sits next to each other */
+#languages .column-grid {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+#languages .column-grid img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    #languages .column-grid {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
 .about-section {
     display: flex;
     justify-content: space-between;
