@@ -16,11 +16,8 @@ const About: React.FC = () => {
             <div className="image-container">
                 <img src="/src/assets/portfolio_image.png" alt="me" className="portfolio-image"></img>
                 <div className="text-overlay">
-                    <h2>{t('about.title')}</h2>
-                    <p className="subtitle">{t('about.subtitle')}</p>
-                    <p className="tagline">{t('about.tagline')}</p>
+                {/*Do I still want a text overlay?*/}
                 </div>
-
             </div>
             <div className="text-container">
                 <div className="about-me"><h1>{t('about.aboutMe')}</h1></div>

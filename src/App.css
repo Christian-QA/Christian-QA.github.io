@@ -87,6 +87,26 @@ section > * {
     padding-bottom: 30px;
 }
 
+.landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.landing-text {
+    text-align: center;
+}
+
+.tagline {
+    text-align: center;
+    padding-top: 30px;
+    max-width: 400px;
+}
+
+
+
+
 .about-section {
     display: flex;
     justify-content: space-between;

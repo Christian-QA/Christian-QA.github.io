@@ -12,8 +12,8 @@ const Landing: React.FC = () => {
 
     return (
         <div className="section-content">
-            <div className="confirmation-container">
-                <div className="confirmation-text">
+            <div className="landing-container">
+                <div className="landing-text">
                     <h2>{t('about.title')}</h2>
                     <p className="subtitle">{t('about.subtitle')}</p>
                     <p className="tagline">{t('about.tagline')}</p>
