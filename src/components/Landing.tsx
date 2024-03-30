@@ -51,7 +51,6 @@ const Landing: React.FC = () => {
                     <div className="language-container">
                         <img src="/src/assets/language-logos/python-official.svg" alt="css" className="language-image"/>
                     </div>
-                    {/*    TODO - Add swift for loyal stamper iOS version when developed   */}
                 </div>
             </div>
         </div>

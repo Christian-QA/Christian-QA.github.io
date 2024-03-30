@@ -92,10 +92,11 @@ section > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    flex-direction: column;
 }
 
 .landing-text {
+    padding-top: 25vh;
     text-align: center;
 }
 
@@ -106,6 +107,7 @@ section > * {
 }
 
 .language-grid {
+    padding-top: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 10px;
