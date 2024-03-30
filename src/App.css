@@ -106,99 +106,31 @@ section > * {
 }
 
 .language-grid {
-    width: 450px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 10px;
+}
+
+.language-container {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .language-image {
-    position: relative; /* Enable positioning for the image */
+    max-width: 80%;
+    max-height: 80%;
 }
 
-.language-image img {
-    width: 280px;
+@media (min-width: 600px) {
+    .language-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-.language-image.first img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 60vh;
-    left: 43%;
-}
-
-.language-image.second img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 400px;
-    left: 300px;
-}
-
-.language-image.third img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 400px;
-    left: 300px;
-}
-
-.language-image.fourth img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 400px;
-    left: 300px;
-}
-
-.language-image.fifth img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 400px;
-    left: 300px;
-}
-
-.language-image.sixth img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 400px;
-    left: 300px;
-}
-
-.language-image.seventh img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 400px;
-    left: 300px;
-}
-
-.language-image.eighth img {
-    position: absolute; /* Make the image positioned within the container */
-    top: 400px;
-    left: 300px;
-}
-
-
-#languages .projects-grid {
-    margin: 50px;
-}
-
-#languages .row-grid {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    background-color: transparent;
-}
-
-/* Create four equal columns that sits next to each other */
-#languages .column-grid {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
-    max-width: 25%;
-    padding: 0 4px;
-}
-
-#languages .column-grid img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-    #languages .column-grid {
-        -ms-flex: 50%;
-        flex: 50%;
-        max-width: 50%;
-    }
+@media (min-width: 900px) {
+    .language-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 .about-section {
