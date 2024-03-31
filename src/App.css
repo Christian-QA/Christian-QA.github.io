@@ -34,6 +34,7 @@ header {
     left: 0;
     position: fixed;
     z-index: 1000;
+    border-bottom-right-radius: 10px
 }
 
 @media (max-width: 768px) {
