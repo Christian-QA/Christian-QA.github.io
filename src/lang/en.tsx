@@ -18,11 +18,32 @@ const Messages = {
 
                 "experience.header": "My Experience",
 
-                "experience.heading.2025": "2025",
+                "experience.heading.2025": "Independent Developer",
                 "experience.entry.2025": "2025",
 
-                "experience.heading.2024": "2024",
+                "experience.heading.2024": "Capgemini Software Engineer Year 2",
                 "experience.entry.2024": "2024",
+
+
+                "experience.heading.2023": "Capgemini Software Engineer Year 1",
+                "experience.entry.2023": "2024",
+
+                "experience.heading.2022": "QA Ltd Consultant",
+                "experience.entry.2022": "2024",
+
+                "experience.heading.2021": "QA Ltd Trainee",
+                "experience.entry.2021": "2024",
+
+                "experience.heading.2020": "Indie Game Developer Year 2",
+                "experience.entry.2020": "2024",
+
+                "experience.heading.2019": "Indie Game Developer Year 1",
+                "experience.entry.2019": "2024",
+
+                "experience.heading.2018": "Web Practitioner",
+                "experience.entry.2018": "2024",
+
+
 
                 "experience.read-more": "Read More",
                 "experience.read-less": "Read Less",
