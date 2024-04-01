@@ -22,7 +22,6 @@ const About: React.FC = () => {
                     </div>
                 </div>
                 <div className="text-container">
-                    <div className="about-me"><h1>{t('about.aboutMe')}</h1></div>
                     <div className="about-story">
                         <p>{t('about.paragraphOne')}</p>
                         <br></br>
