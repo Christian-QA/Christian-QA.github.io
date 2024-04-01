@@ -2,6 +2,7 @@ import React from 'react';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import Messages from "../lang/en.tsx";
+import '../styling/Landing.css'
 
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
@@ -9,7 +10,7 @@ i18n
 
 const Landing: React.FC = () => {
     const { t } = useTranslation();
-    
+
     return (
         <div className="section-content">
             <div className="landing-container">

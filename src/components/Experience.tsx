@@ -2,6 +2,7 @@ import React, {useState, useEffect, useMemo, useRef} from 'react';
 import i18n from 'i18next';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import Messages from '../lang/en.tsx';
+import '../styling/Experience.css'
 
 i18n.use(initReactI18next).init(Messages);
 

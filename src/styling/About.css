@@ -1,0 +1,80 @@
+.about-section {
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.image-container {
+    width: 40%;
+}
+
+.image-placeholder { /* TODO - Delete later */
+    width: 100%;
+    padding-bottom: 100%; /* This maintains the aspect ratio of 3024 x 4032 */
+    position: relative;
+}
+
+.portfolio-image {
+    height: 100%;
+}
+
+.about-cutoff {
+    width: 100%;
+    padding-bottom: 5%;
+    background-color: var(--white);
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 33.33%; /* Positions the overlay about two-thirds down */
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent black overlay */
+    color: var(--white);
+    text-align: center;
+}
+
+.text-container {
+    flex: 0 0 45%;
+    max-width: 45%;
+    padding: 1em;
+    background-color: var(--off-white);
+    color: var(--text-container-colour);
+    margin-right: 25%;
+}
+
+.about-me {
+    width: 100%;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--purple);
+    position: relative;
+    padding: 2%;
+}
+
+.about-story {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+/* Media queries for responsive layout */
+@media (max-width: 768px) {
+    .about-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container,
+    .text-container {
+        max-width: 100%;
+    }
+}

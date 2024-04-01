@@ -1,0 +1,214 @@
+.experience-section {
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 0 5%;
+}
+
+.experience-container {
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 0 5%;
+}
+
+#timeline ul {
+    padding: 50px 0;
+}
+
+#timeline ul .bottom {
+    padding: 0;
+}
+
+#timeline ul li {
+    list-style: none;
+    position: relative;
+    width: 7px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: var(--purple);
+}
+
+#timeline ul li .box {
+    position: relative;
+    bottom: 0;
+    width: 450px;
+    background-color: var(--text-container-colour);
+    box-shadow: 0 0 5px var(--white);
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+}
+
+#timeline ul li:nth-child(odd) .box {
+    left: 50px;
+    transform: translateX(400%);
+}
+
+#timeline ul li:nth-child(even) .box {
+    right: 500px;
+    transform: translateX(-400%);
+}
+
+#timeline ul li .box.show {
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+}
+
+#timeline .title {
+    /*box-shadow: 0 5px 10px black;*/
+    margin-top: 0;
+    padding: 0.5rem 0 1rem 0.7rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: var(--white);
+    font-size: 1.3rem;
+    background-color: var(--purple);
+}
+
+#timeline .year {
+    background-color: var(--aqua);
+    padding: 0.2rem 0.8rem;
+    border-radius: 10px;
+    color: var(--black);
+    font-size:0.9rem;
+    margin: 0 0.5rem;
+}
+
+#timeline .description-box {
+    height: 200px;
+    overflow: hidden;
+    line-height: 1.5;
+    padding: 10px 0;
+    position: relative;
+}
+
+#timeline .description-box.active {
+    height: auto;
+    padding-bottom: 0;
+}
+
+#timeline p {
+    padding: 1rem 0 1rem 1rem;
+    overflow: auto;
+}
+
+#timeline button {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 0;
+    border: none;
+    font-weight: bold;
+    background-color: var(--purple);
+    padding: 20px 0;
+}
+
+#timeline .button_front {
+    position: absolute;
+    right: 50px;
+    left: 50px;
+    bottom: 8px;
+    border-radius: 90px;
+    border: 2px solid var(--purple);
+    font-weight: bold;
+}
+
+#timeline button:hover {
+    color: var(--aqua);
+}
+
+#timeline button:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    /*background: linear-gradient(180deg, #1a1a1a, #6e8ba2, aqua);*/
+    z-index: -1;
+}
+
+#timeline .active_button {
+    position: unset;
+    width: 100%;
+}
+
+#timeline .active_button:after {
+    background: transparent;
+}
+
+#timeline ul li i {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--text-container-colour);
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+#timeline .experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    color: var(--aqua);
+}
+
+#timeline .box:before {
+    content: "";
+    position: absolute;
+    top: 75px;
+    width: 0;
+    right: 0;
+    border-style: solid;
+}
+
+#timeline ul li:nth-child(odd) .box:before {
+    border-color: transparent;
+}
+
+#timeline ul li:nth-child(even) .box:before {
+
+    border-color: transparent;
+}
+
+@media (max-width: 1040px) {
+    #timeline ul li .box {
+        width: 320px;
+    }
+
+    /* TODO - Find a way to make shrinking transition more seamless */
+    #timeline ul li:nth-child(even) .box {
+        left: -370px
+    }
+}
+
+@media (max-width: 768px) {
+
+    .experience-container {
+        align-items: flex-start;
+        width: 80px;
+    }
+
+
+    #timeline ul li .box {
+        width: 380px;
+    }
+
+    #timeline ul li:nth-child(even) .box:before {
+        left: -15px;
+        border-color: transparent var(--aqua);
+    }
+
+    #timeline ul li:nth-child(odd) .box {
+        left: 40px;
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        left: 40px;
+    }
+}

@@ -1,6 +1,7 @@
 import React, {useRef, useState} from 'react';
 import { useTranslation } from "react-i18next";
 import emailjs from '@emailjs/browser';
+import '../styling/Contact.css'
 
 const Contact: React.FC = () => {
     const { t } = useTranslation();
