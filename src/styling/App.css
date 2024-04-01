@@ -1,0 +1,133 @@
+/* Reset some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --purple: rebeccapurple;
+    --aqua: aqua;
+    --white: white;
+    --black: black;
+    --off-white: #efefef;
+    --text-container-colour: rgb(23, 23, 23);
+    --background: #2a2b2f;
+    --above-background: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: var(--purple);
+    text-align: center;
+    font-size: 3rem;
+    padding: 0.1rem;
+    width: 100%;
+    margin: 0;
+}
+
+header {
+    background-color: var(--purple);
+    color: var(--white);
+    padding: 1rem;
+    max-width: 100%;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    border-bottom-right-radius: 10px
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        max-width: 100%;
+        display: inline-block;
+        text-align: center;
+        align-content: center;
+    }
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 767px) {
+    nav ul {
+        justify-content: center;
+    }
+    nav ul li {
+        margin-right: 0;
+        display: inline-block;
+        margin-left: 0;
+        padding: 0;
+    }
+    button {
+        padding: 0;
+    }
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: var(--background);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Content styles */
+section > * {
+    max-width: 100%;
+    margin: 0;
+    background-color: transparent;
+    padding-bottom: 30px;
+}
+
+.row-grid {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    background-color: var(--white);
+}
+
+/* Create four equal columns that sits next to each other */
+.column-grid {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column-grid img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
+import '../styling/Project.css'
 
 const Projects: React.FC = () => {
     const { t } = useTranslation();

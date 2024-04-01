@@ -2,6 +2,7 @@ import React from 'react';
 import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import Messages from "../lang/en.tsx";
+import '../styling/Landing.css'
 
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
@@ -9,7 +10,6 @@ i18n
 
 const Landing: React.FC = () => {
     const { t } = useTranslation();
-
 
     return (
         <div className="section-content">
@@ -31,11 +31,11 @@ const Landing: React.FC = () => {
                              className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"
+                        <img src="/src/assets/language-logos/dartlang-official.svg" alt="dart"
                              className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/dartlang-official.svg" alt="dart"
+                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"
                              className="language-image"/>
                     </div>
                     <div className="language-container">
@@ -48,7 +48,7 @@ const Landing: React.FC = () => {
                     <div className="language-container">
                         <img src="/src/assets/language-logos/w3_css-ar21.svg" alt="css" className="language-image"/>
                     </div>
-                {/*    TODO - Add Python and Swift when the respective projects have released work */}
+                    {/*    TODO - Add Python and Swift when the respective projects have released work */}
                 </div>
             </div>
         </div>
