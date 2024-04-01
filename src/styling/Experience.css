@@ -61,13 +61,12 @@
     padding: 0.5rem 0 1rem 0.7rem;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    color: var(--white);
     font-size: 1.3rem;
     background-color: var(--purple);
 }
 
 #timeline .year {
-    background-color: var(--aqua);
+    background-color: var(--text);
     padding: 0.2rem 0.8rem;
     border-radius: 10px;
     color: var(--black);
@@ -116,7 +115,7 @@
 }
 
 #timeline button:hover {
-    color: var(--aqua);
+    color: var(--text);
 }
 
 #timeline button:after {
@@ -201,7 +200,7 @@
 
     #timeline ul li:nth-child(even) .box:before {
         left: -15px;
-        border-color: transparent var(--aqua);
+        border-color: transparent var(--text);
     }
 
     #timeline ul li:nth-child(odd) .box {
