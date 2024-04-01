@@ -1,6 +1,7 @@
 import React from 'react';
 import {useTranslation} from "react-i18next";
 import '../styling/Project.css'
+import JS from "../assets/language-logos/javascript-ar21.svg"
 
 const Projects: React.FC = () => {
     const { t } = useTranslation();
@@ -11,20 +12,20 @@ const Projects: React.FC = () => {
             <div className="projects-grid" id="projects">
                 <div className="row-grid">
                     <div className="column-grid">
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
                     </div>
                     <div className="column-grid">
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
                     </div>
                     <div className="column-grid">
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
                     </div>
                     <div className="column-grid">
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
+                        <img src={JS} alt="javascript"/>
                     </div>
                 </div>
             </div>
