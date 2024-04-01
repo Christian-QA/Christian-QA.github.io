@@ -3,6 +3,7 @@ import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import Messages from "../lang/en.tsx";
 import '../styling/About.css'
+import PortfolioImage from "../assets/portfolio_image.jpg"
 
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
@@ -16,7 +17,7 @@ const About: React.FC = () => {
             <h2 className="header">{t("about.header")}</h2>
             <div className="about-section">
                 <div className="image-container">
-                    <img src="/src/assets/portfolio_image.jpg" alt="me" className="portfolio-image"></img>
+                    <img src={PortfolioImage} alt="me" className="portfolio-image"></img>
                     <div className="text-overlay">
                         {/*Do I still want a text overlay?*/}
                     </div>
@@ -27,7 +28,7 @@ const About: React.FC = () => {
                         <hr/>
                         <br/>
                         <p>{t('about.paragraphOne')}</p>
-                        <br></br>
+                        <br/>
                         <p>{t('about.paragraphTwo')}</p>
                     </div>
                 </div>
