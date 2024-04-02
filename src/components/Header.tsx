@@ -14,16 +14,16 @@ const Header: React.FC = () => {
         <header>
             <nav>
                 <ul>
-                    <li>
+                    <li className="nav-button">
                         {smoothScroll({id: "about", text: "header.about", t})}
                     </li>
-                    <li>
+                    <li className="nav-button">
                         {smoothScroll({id: "experience", text: "header.experience", t})}
                     </li>
                     {/*<li>*/}
                     {/*    {smoothScroll({id: "projects", text: "header.projects", t})}*/}
                     {/*</li>*/}
-                    <li>
+                    <li className="nav-button">
                         {smoothScroll({id: "contact", text: "header.contact", t})}
                     </li>
                 </ul>

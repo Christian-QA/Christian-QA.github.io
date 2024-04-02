@@ -30,6 +30,13 @@ body {
     overflow-x: hidden;
 }
 
+.nav-button {
+    color: var(--text);
+    background-color: var(--purple);
+    margin: 0 5px;
+    padding: 5px;
+}
+
 .header {
     background-color: var(--purple);
     text-align: center;
