@@ -47,6 +47,12 @@ p {
   margin-bottom: 0.5rem;
 }
 
+.trans {
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0.5rem 1rem 1rem;
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
