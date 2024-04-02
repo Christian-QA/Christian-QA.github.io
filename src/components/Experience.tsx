@@ -53,9 +53,7 @@ const useDescriptionBoxes = () => {
                         ? t('experience.read-less')
                         : t('experience.read-more');
                 };
-
                 button.addEventListener('click', handleClick);
-
                 return () => button.removeEventListener('click', handleClick);
             }
         });
@@ -110,7 +108,7 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
                     </ul>
                 </div>
         </div>
-);
+    );
 };
 
 export default Experience;
