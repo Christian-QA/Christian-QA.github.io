@@ -253,56 +253,48 @@
     @media (max-width: 720px) {
         #timeline ul li .box {
             width: 600px;
-            bottom: 2px;
         }
     }
 
     @media (max-width: 690px) {
         #timeline ul li .box {
             width: 570px;
-            bottom: 2px;
         }
     }
 
     @media (max-width: 660px) {
         #timeline ul li .box {
             width: 540px;
-            bottom: 2px;
         }
     }
 
     @media (max-width: 630px) {
         #timeline ul li .box {
             width: 510px;
-            bottom: 2px;
         }
     }
 
     @media (max-width: 600px) {
         #timeline ul li .box {
             width: 480px;
-            bottom: 2px;
         }
     }
 
     @media (max-width: 570px) {
         #timeline ul li .box {
             width: 450px;
-            bottom: 2px;
         }
     }
 
     @media (max-width: 540px) {
         #timeline ul li .box {
             width: 420px;
-            bottom: 2px;
         }
     }
 
     @media (max-width: 510px) {
         #timeline ul li .box {
             width: 390px;
-            bottom: 2px;
         }
 
     }
@@ -310,7 +302,6 @@
     @media (max-width: 470px) {
         #timeline ul li .box {
             width: 410px;
-            bottom: 2px;
         }
 
         #timeline ul li:nth-child(odd) .box {
@@ -327,34 +318,28 @@
     @media (max-width: 440px) {
         #timeline ul li .box {
             width: 370px;
-            bottom: 2px;
         }
 
         #timeline ul li:nth-child(odd) .box {
             left: -15px;
-            right: -20px;
         }
 
         #timeline ul li:nth-child(even) .box {
             left: -15px;
-            right: -20px;
         }
     }
 
     @media (max-width: 410px) {
         #timeline ul li .box {
             width: 350px;
-            bottom: 2px;
         }
 
         #timeline ul li:nth-child(odd) .box {
             left: -20px;
-            right: -20px;
         }
 
         #timeline ul li:nth-child(even) .box {
             left: -20px;
-            right: -20px;
         }
     }
 
@@ -363,32 +348,12 @@
             width: 330px;
             bottom: 2px;
         }
-
-        #timeline ul li:nth-child(odd) .box {
-            left: -20px;
-            right: -20px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: -20px;
-            right: -20px;
-        }
     }
 
     @media (max-width: 370px) {
         #timeline ul li .box {
             width: 310px;
-            bottom: 2px;
         }
 
-        #timeline ul li:nth-child(odd) .box {
-            left: -20px;
-            right: -20px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: -20px;
-            right: -20px;
-        }
     }
 }
