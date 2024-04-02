@@ -78,9 +78,6 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
             (acc: {headings: string[], entries: string[]}, year) => {
                 acc.headings.push(`experience.heading.${year}`);
                 acc.entries.push(`experience.entry.${year}`);
-
-                acc.entries.map(str => str.replace('\n', '<br/>'))
-
                 return acc;
             },
             { headings: [], entries: [] }
