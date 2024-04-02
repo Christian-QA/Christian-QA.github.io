@@ -42,9 +42,16 @@
 }
 
 @media (min-width: 300px) {
-    .language-grid { grid-template-columns: repeat(3, 1fr); }
+    .language-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 15px;
+    }
 }
 
 @media (min-width: 900px) {
-    .language-grid { grid-template-columns: repeat(4, 1fr); }
+    .language-grid {
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 15px;
+    }
+
 }

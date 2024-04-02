@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useMemo, useRef} from 'react';
 import i18n from 'i18next';
-import { initReactI18next, useTranslation } from 'react-i18next';
+import {initReactI18next, Trans, useTranslation} from 'react-i18next';
 import Messages from '../lang/en.tsx';
 import '../styling/Experience.css'
 
@@ -70,9 +70,12 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
     const headingsAndEntries = useMemo(() => {
         const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
         return years.reduce(
-            (acc, year) => {
+            (acc: {headings: string[], entries: string[]}, year) => {
                 acc.headings.push(`experience.heading.${year}`);
                 acc.entries.push(`experience.entry.${year}`);
+
+                acc.entries.map(str => str.replace('\n', '<br/>'))
+
                 return acc;
             },
             { headings: [], entries: [] }
@@ -91,7 +94,7 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
                                      ref={(ref) => addBoxRef(ref, index)}>
                                     <h3 className="title">{t(heading)}</h3>
                                     <div className="description-box">
-                                        <p>{t(headingsAndEntries.entries[index])}</p>
+                                        <Trans i18nKey="message" className="trans"><p className="trans">{t(headingsAndEntries.entries[index])}</p></Trans>
                                         <button className="button">
                                             <div className="button_front">{t("experience.read-more")}</div>
                                         </button>

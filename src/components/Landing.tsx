@@ -3,6 +3,14 @@ import i18n from "i18next";
 import { useTranslation, initReactI18next } from "react-i18next";
 import Messages from "../lang/en.tsx";
 import '../styling/Landing.css'
+import Scala from "../assets/language-logos/scala-ar21.svg"
+import Java from "../assets/language-logos/java-ar21.svg"
+import Kotlin from "../assets/language-logos/kotlinlang-ar21.svg"
+import Dart from "../assets/language-logos/dartlang-official.svg"
+import JS from "../assets/language-logos/javascript-ar21.svg"
+import TS from "../assets/language-logos/typescriptlang-icon.svg"
+import HTML from "../assets/language-logos/w3_html5-ar21.svg"
+import CSS from "../assets/language-logos/w3_css-ar21.svg"
 
 i18n
     .use(initReactI18next) // passes i18n down to react-i18next
@@ -21,32 +29,32 @@ const Landing: React.FC = () => {
                 </div>
                 <div className="language-grid" id="languages">
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/scala-ar21.svg" alt="scala" className="language-image"/>
+                        <img src={Scala} alt="scala" className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/java-ar21.svg" alt="java" className="language-image"/>
+                        <img src={Java} alt="java" className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/kotlinlang-ar21.svg" alt="kotlin"
+                        <img src={Kotlin} alt="kotlin"
                              className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/dartlang-official.svg" alt="dart"
+                        <img src={Dart} alt="dart"
                              className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/javascript-ar21.svg" alt="javascript"
+                        <img src={JS} alt="javascript"
                              className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/typescriptlang-icon.svg" alt="typescript"
+                        <img src={TS} alt="typescript"
                              className="language-image typescript"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/w3_html5-ar21.svg" alt="html" className="language-image"/>
+                        <img src={HTML} alt="html" className="language-image"/>
                     </div>
                     <div className="language-container">
-                        <img src="/src/assets/language-logos/w3_css-ar21.svg" alt="css" className="language-image"/>
+                        <img src={CSS} alt="css" className="language-image"/>
                     </div>
                     {/*    TODO - Add Python and Swift when the respective projects have released work */}
                 </div>
