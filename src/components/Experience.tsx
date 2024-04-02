@@ -49,7 +49,7 @@ const useDescriptionBoxes = () => {
                 const handleClick = () => {
                     element.classList.toggle('active');
                     button.classList.toggle('active_button');
-                    buttonFront.innerHTML = buttonFront.classList.contains('active_button')
+                    buttonFront.innerHTML = button.classList.contains('active_button')
                         ? t('experience.read-less')
                         : t('experience.read-more');
                 };
@@ -96,7 +96,7 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
                                     <div className="description-box">
                                         <Trans i18nKey="message" className="trans"><p className="trans">{t(headingsAndEntries.entries[index])}</p></Trans>
                                         <button className="button">
-                                            <div className="button_front">{t("experience.read-more")}</div>
+                                            <div className="button_front">{t('experience.read-more')}</div>
                                         </button>
                                     </div>
                                 </div>

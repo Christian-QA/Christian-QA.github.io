@@ -110,13 +110,14 @@
     left: 50px;
     bottom: 8px;
     border-radius: 90px;
-    border: 2px solid var(--purple);
     font-weight: bold;
 }
 
 #timeline button:hover {
     color: var(--text);
+    background-color: var(--fuchsia);
 }
+
 
 #timeline button:after {
     position: absolute;
