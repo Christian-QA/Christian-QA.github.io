@@ -210,6 +210,20 @@
         left: 40px;
     }
 
+    @media (min-width: 540px) {
+        #timeline ul li .box {
+            width: 450px;
+            bottom: 2px;
+        }
+    }
+
+    @media (min-width: 510px) {
+        #timeline ul li .box {
+            width: 420px;
+            bottom: 2px;
+        }
+    }
+
     @media (max-width: 470px) {
         #timeline ul li .box {
             width: 420px;
