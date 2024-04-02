@@ -213,15 +213,15 @@
 
     @media (max-width: 500px) {
         #timeline ul li .box {
-            width: 330px;
+            width: 100px;
         }
 
         #timeline ul li:nth-child(odd) .box {
-            left: 32px;
+            left: 30px;
         }
 
         #timeline ul li:nth-child(even) .box {
-            left: 32px;
+            left: 30px;
         }
     }
 }
