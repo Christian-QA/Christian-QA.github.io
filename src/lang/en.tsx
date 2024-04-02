@@ -8,7 +8,7 @@ const Messages = {
                 "header.contact": "Contact",
 
                 "landing.title": "Christian Redfern",
-                "landing.subtitle": "Heyo, welcome to my portfolio website!",
+                "landing.subtitle": "Welcome to my portfolio website!",
                 "landing.tagline": "I create robust APIs and web components that empower businesses of all sizes.",
 
                 "about.header": "About Me",
