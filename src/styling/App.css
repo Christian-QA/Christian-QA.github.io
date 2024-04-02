@@ -49,7 +49,7 @@ header {
     border-bottom-right-radius: 10px
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1050px) {
     header {
         width: 100%;
         display: inline-block;
@@ -67,7 +67,7 @@ nav ul {
 }
 
 /* For screens smaller than 768px (mobile devices) */
-@media (max-width: 767px) {
+@media (max-width: 1050px) {
     nav ul {
         justify-content: center;
     }
