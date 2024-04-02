@@ -48,14 +48,14 @@
     }
 }
 
-@media (min-width: 460px) {
+@media (max-width: 899px) {
     .language-grid {
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 15px;
     }
 }
 
-@media (min-width: 300px) {
+@media (max-width: 460px) {
     .language-grid {
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 15px;

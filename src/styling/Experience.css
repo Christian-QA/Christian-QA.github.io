@@ -211,7 +211,7 @@
         left: 40px;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
         #timeline ul li .box {
             width: 330px;
         }

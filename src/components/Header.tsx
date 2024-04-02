@@ -20,9 +20,9 @@ const Header: React.FC = () => {
                     <li>
                         {smoothScroll({id: "experience", text: "header.experience", t})}
                     </li>
-                    <li>
-                        {smoothScroll({id: "projects", text: "header.projects", t})}
-                    </li>
+                    {/*<li>*/}
+                    {/*    {smoothScroll({id: "projects", text: "header.projects", t})}*/}
+                    {/*</li>*/}
                     <li>
                         {smoothScroll({id: "contact", text: "header.contact", t})}
                     </li>
