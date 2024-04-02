@@ -177,13 +177,46 @@
 
 @media (max-width: 1040px) {
     #timeline ul li .box {
-        width: 320px;
+        width: 430px;
     }
 
     /* TODO - Find a way to make shrinking transition more seamless */
     #timeline ul li:nth-child(even) .box {
-        left: -370px
+        left: -475px
     }
+
+    @media (max-width: 1010px) {
+        #timeline ul li .box {
+            width: 400px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -445px
+        }
+    }
+
+    @media (max-width: 940px) {
+        #timeline ul li .box {
+            width: 370px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -415px
+        }
+    }
+
+    @media (max-width: 860px) {
+        #timeline ul li .box {
+            width: 330px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -375px
+        }
+    }
+
+
+
 }
 
 @media (max-width: 768px) {
@@ -192,7 +225,6 @@
         align-items: flex-start;
         width: 80px;
     }
-
 
     #timeline ul li .box {
         width: 380px;
@@ -209,5 +241,119 @@
 
     #timeline ul li:nth-child(even) .box {
         left: 40px;
+    }
+
+    @media (max-width: 767px) {
+        #timeline ul li .box {
+            width: 630px;
+            bottom: 2px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        #timeline ul li .box {
+            width: 600px;
+        }
+    }
+
+    @media (max-width: 690px) {
+        #timeline ul li .box {
+            width: 570px;
+        }
+    }
+
+    @media (max-width: 660px) {
+        #timeline ul li .box {
+            width: 540px;
+        }
+    }
+
+    @media (max-width: 630px) {
+        #timeline ul li .box {
+            width: 510px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        #timeline ul li .box {
+            width: 480px;
+        }
+    }
+
+    @media (max-width: 570px) {
+        #timeline ul li .box {
+            width: 450px;
+        }
+    }
+
+    @media (max-width: 540px) {
+        #timeline ul li .box {
+            width: 420px;
+        }
+    }
+
+    @media (max-width: 510px) {
+        #timeline ul li .box {
+            width: 390px;
+        }
+
+    }
+
+    @media (max-width: 470px) {
+        #timeline ul li .box {
+            width: 410px;
+        }
+
+        #timeline ul li:nth-child(odd) .box {
+            left: -10px;
+            right: -20px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -10px;
+            right: -20px;
+        }
+    }
+
+    @media (max-width: 440px) {
+        #timeline ul li .box {
+            width: 370px;
+        }
+
+        #timeline ul li:nth-child(odd) .box {
+            left: -15px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -15px;
+        }
+    }
+
+    @media (max-width: 410px) {
+        #timeline ul li .box {
+            width: 350px;
+        }
+
+        #timeline ul li:nth-child(odd) .box {
+            left: -20px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -20px;
+        }
+    }
+
+    @media (max-width: 390px) {
+        #timeline ul li .box {
+            width: 330px;
+            bottom: 2px;
+        }
+    }
+
+    @media (max-width: 370px) {
+        #timeline ul li .box {
+            width: 310px;
+        }
+
     }
 }
