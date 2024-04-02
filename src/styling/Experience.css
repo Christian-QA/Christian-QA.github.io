@@ -177,13 +177,46 @@
 
 @media (max-width: 1040px) {
     #timeline ul li .box {
-        width: 320px;
+        width: 430px;
     }
 
     /* TODO - Find a way to make shrinking transition more seamless */
     #timeline ul li:nth-child(even) .box {
-        left: -370px
+        left: -475px
     }
+
+    @media (max-width: 1010px) {
+        #timeline ul li .box {
+            width: 400px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -445px
+        }
+    }
+
+    @media (max-width: 940px) {
+        #timeline ul li .box {
+            width: 370px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -415px
+        }
+    }
+
+    @media (max-width: 860px) {
+        #timeline ul li .box {
+            width: 330px;
+        }
+
+        #timeline ul li:nth-child(even) .box {
+            left: -375px
+        }
+    }
+
+
+
 }
 
 @media (max-width: 768px) {
