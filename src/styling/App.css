@@ -37,6 +37,13 @@ body {
     padding: 5px;
 }
 
+@media (max-width: 400px) {
+    .nav-button {
+        margin: 0 2px;
+        padding: 2px;
+    }
+}
+
 .header {
     background-color: var(--purple);
     text-align: center;
