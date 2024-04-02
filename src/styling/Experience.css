@@ -58,7 +58,7 @@
 #timeline .title {
     /*box-shadow: 0 5px 10px black;*/
     margin-top: 0;
-    padding: 0.5rem 0 1rem 0.7rem;
+    padding: 0.8rem 0 1rem 0.7rem;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     font-size: 1.3rem;
@@ -75,10 +75,10 @@
 }
 
 #timeline .description-box {
-    height: 200px;
+    height: 150px;
     overflow: hidden;
     line-height: 1.5;
-    padding: 10px 0;
+    padding: 0;
     position: relative;
 }
 
