@@ -47,3 +47,47 @@
         margin: 0;
     }
 }
+
+.socials {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.fa {
+    display: flex;
+    padding: 20px;
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-github {
+    background: #161b22;
+    color: white
+}
+
+.fa-upwork {
+    background: #14a800;
+    color: white;
+}
+
+.icon {
+    filter: invert(1);
+    width: 150px;
+    object-fit: cover;
+}
