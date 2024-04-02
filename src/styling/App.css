@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+    -webkit-appearance: none;
     --purple: darkslateblue;
     --text: #e5ffff;
     --aqua: aqua;
@@ -14,12 +15,14 @@
 }
 
 * {
+    -webkit-appearance: none;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
+    -webkit-appearance: none;
     font-family: Montserrat, sans-serif;
     line-height: 1.6;
     color: var(--text);
