@@ -36,12 +36,20 @@
 
 #timeline ul li:nth-child(odd) .box {
     left: 50px;
-    transform: translateX(400%);
 }
 
 #timeline ul li:nth-child(even) .box {
     right: 500px;
-    transform: translateX(-400%);
+}
+
+@media (min-width: 768px) {
+    #timeline ul li:nth-child(odd) .box {
+        transform: translateX(400%);
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        transform: translateX(-400%);
+    }
 }
 
 #timeline ul li .box.show {
