@@ -97,8 +97,9 @@
     border-radius: 0;
     border: none;
     font-weight: bold;
+    font-size: 1rem;
     background-color: var(--purple);
-    padding: 20px 0;
+    padding: 25px 0;
 }
 
 #timeline .button_front {
@@ -108,7 +109,10 @@
     bottom: 8px;
     border-radius: 90px;
     font-weight: bold;
+    text-decoration: underline;
 }
+
+
 
 #timeline button:hover {
     color: var(--text);
