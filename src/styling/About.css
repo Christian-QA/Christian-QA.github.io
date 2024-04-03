@@ -1,20 +1,21 @@
 .about-section {
     display: flex;
     align-items: center;
-    align-content: flex-end;
 }
 
 .image-container {
     flex: 0 0 50%;
     max-height: 80%;
-    align-content: flex-end;
     text-align: right;
+    align-self: flex-end; /* Align the item along the cross-axis */
 }
 
 .portfolio-image {
     max-width: 100%;
     width: 83%;
-    max-height: 85%;
+    height: auto; /* Allow the image to scale proportionally */
+    max-height: 85%; /* Limit the maximum height */
+    object-fit: contain; /* Maintain aspect ratio and fit within the container */
 }
 
 .text-container {
@@ -22,8 +23,7 @@
     max-width: 50%;
     padding: 1em;
     margin-right: 25%;
-    vertical-align: top;
-    align-self: start;
+    align-self: flex-start; /* Align the item along the cross-axis */
 }
 
 .about-story {
@@ -33,47 +33,46 @@
 
 @media (max-width: 1075px) {
     .about-section {
-        display: flex;
         flex-direction: column;
     }
 
     .image-container,
-    .text-container,
+    .text-container {
+        width: 100%;
+        max-width: 100%;
+        text-align: center; /* Center the text */
+        margin: 0;
+    }
+
     .portfolio-image {
         width: 100%;
         max-width: 100%;
-        align-content: center;
-        text-align: center;
-        margin: 0;
     }
 }
 
 .socials {
     display: flex;
-    text-align: center;
     justify-content: center;
 }
 
-.fa {
-    display: flex;
-    padding: 20px;
-    font-size: 50px;
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 100px;
     height: 100px;
-    text-align: center;
-    justify-content: center;
-    vertical-align: middle;
-    text-decoration: none;
     margin: 10px 5px;
     background-color: var(--above-background);
+    text-decoration: none;
 }
 
-.fa:hover {
+.social-link:hover {
     opacity: 0.7;
 }
 
 .icon {
     filter: invert(1);
-    width: 150px;
-    object-fit: cover;
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
 }
