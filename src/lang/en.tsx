@@ -8,7 +8,7 @@ const Messages = {
                 "header.contact": "Contact",
 
                 "landing.title": "Christian Redfern",
-                "landing.subtitle": "Heyo, welcome to my portfolio website!",
+                "landing.subtitle": "Welcome to my portfolio website!",
                 "landing.tagline": "I create robust APIs and web components that empower businesses of all sizes.",
 
                 "about.header": "About Me",
@@ -17,7 +17,7 @@ const Messages = {
                 "about.paragraphTwo": "Outside of code, I find balance through strength training, experimenting with new recipes in the kitchen, and creating pixel art. These passions fuel my creativity and problem-solving skills, which I bring to every project.",
 
                 "experience.header": "My Experience",
-
+                "experience.present-year": "Now",
                 "experience.heading.2025": "Independent Developer",
                 "experience.entry.2025": "I started the year as someone with over three years of software engineering industry experience and zero commitments. I had always wanted to pursue selling my skills as a contractor, drawn in by the allure of being my own boss, deciding my own hours and ways of working and giving me more time to visit my partner in the US. There's no time like the present, so why not use this year to build my talents and my brand?\n" +
                     "<br/> <br/>" +
@@ -29,7 +29,6 @@ const Messages = {
                     "As one of the longest-running developers on the team, I introduced new team members to the dozens of distinct microservices we managed. A lot of Scala developers transition from Java, and as someone who did the same, I was able to provide a relatable perspective.\n" +
                     "<br/> <br/>" +
                     "Eventually, I ended up leaving Capgemini to pursue a Master's degree full-time to help cover weak points I may have developed from primarily being self-taught. This ended up being a huge mistake, as the quality of material covered at a level 7 non-computer science tech degree doesn't compare favourably to the knowledge gained implicitly through work experience. Afterwards, I took my career break into a new direction, figuring out what I wanted to do now I was in a position free from commitments.\n",
-
 
                 "experience.heading.2023": "Capgemini Software Engineer Year 1",
                 "experience.entry.2023": "After moving to Capgemini through a contract conversion, I was at the point in my career where I could take on more substantial work. The most notable was the migration to a new HTTP reads pattern, which initially wasn't compatible with some of our older services. This meant that heavy refactoring was needed, occasionally resulting in codebases being unrecognisable from how they were a month before. It was during this time I realised just how far from finished a tech product is once it's released to the public, as there's always code which can be optimised, new libraries and versions which can be leveraged, and bugs to fix.\n" +
@@ -57,9 +56,8 @@ const Messages = {
                 "experience.heading.2018": "Web Practitioner",
                 "experience.entry.2018": "My first exposure to programming was through the creation of a D&D web app I decided to create to compliment a campaign I was running. The intention was to create an immersive portal for my friends to use to gain clarity on the custom world they were playing in. I had no prior coding experience at this time, and certainly had no idea of the journey it would lead me on. I had recently finished my mechanical engineering HND and concluded that I hated mechanical engineering, which made me very uncertain of my future. Additionally, I had started a career in frontline security, lacking the confidence to explore anything technical after not vibing with mechanical engineering. My software development hobby is what freed me from a path I was not supposed to be on, building the foundation for my skill and passion for the craft.\n",
 
-                "experience.read-more": "Read More",
-                "experience.read-less": "Read Less",
-
+                "experience.read-more": "Click to Open",
+                "experience.read-less": "Click to Close",
 
                 "projects.header": "Personal Projects",
 

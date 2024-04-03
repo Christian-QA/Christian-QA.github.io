@@ -44,7 +44,7 @@ const Landing: React.FC = () => {
                     </div>
                     <div className="language-container">
                         <img src={JS} alt="javascript"
-                             className="language-image"/>
+                             className="language-image typescript"/>
                     </div>
                     <div className="language-container">
                         <img src={TS} alt="typescript"

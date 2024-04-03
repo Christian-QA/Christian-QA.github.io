@@ -53,11 +53,28 @@
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 15px;
     }
+
+    .language-container {
+        height: 125px;
+        width: 125px;
+    }
 }
 
 @media (max-width: 460px) {
     .language-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .language-grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 15px;
+    }
+
+    .language-container {
+        height: 100px;
+        width: 100px;
     }
 }

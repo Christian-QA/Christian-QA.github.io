@@ -1,10 +1,4 @@
-.experience-section {
-    align-items: center;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 0 5%;
-}
-
+.experience-section,
 .experience-container {
     align-items: center;
     max-width: 100%;
@@ -42,12 +36,20 @@
 
 #timeline ul li:nth-child(odd) .box {
     left: 50px;
-    transform: translateX(400%);
 }
 
 #timeline ul li:nth-child(even) .box {
     right: 500px;
-    transform: translateX(-400%);
+}
+
+@media (min-width: 768px) {
+    #timeline ul li:nth-child(odd) .box {
+        transform: translateX(400%);
+    }
+
+    #timeline ul li:nth-child(even) .box {
+        transform: translateX(-400%);
+    }
 }
 
 #timeline ul li .box.show {
@@ -58,11 +60,12 @@
 #timeline .title {
     /*box-shadow: 0 5px 10px black;*/
     margin-top: 0;
-    padding: 0.8rem 0 1rem 0.7rem;
+    padding: 1rem;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background-color: var(--purple);
+    text-align: center;
 }
 
 #timeline .year {
@@ -80,6 +83,8 @@
     line-height: 1.5;
     padding: 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 #timeline .description-box.active {
@@ -89,7 +94,7 @@
 
 #timeline p {
     padding: 1rem 0 1rem 1rem;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #timeline button {
@@ -100,8 +105,16 @@
     border-radius: 0;
     border: none;
     font-weight: bold;
+    font-size: 1rem;
     background-color: var(--purple);
     padding: 20px 0;
+    justify-content: center;
+}
+
+@media (max-width: 276px) {
+    #timeline button {
+        padding: 25px 0;
+    }
 }
 
 #timeline .button_front {
@@ -110,13 +123,17 @@
     left: 50px;
     bottom: 8px;
     border-radius: 90px;
-    border: 2px solid var(--purple);
     font-weight: bold;
+    text-decoration: underline;
 }
+
+
 
 #timeline button:hover {
     color: var(--text);
+    background-color: var(--fuchsia);
 }
+
 
 #timeline button:after {
     position: absolute;
@@ -214,20 +231,17 @@
             left: -375px
         }
     }
-
-
-
 }
 
 @media (max-width: 768px) {
-
     .experience-container {
         align-items: flex-start;
         width: 80px;
     }
 
     #timeline ul li .box {
-        width: 380px;
+        width: 77vw;
+        max-width: 77vw; /* Increase the maximum width to 90% of the viewport width */
     }
 
     #timeline ul li:nth-child(even) .box:before {
@@ -241,119 +255,5 @@
 
     #timeline ul li:nth-child(even) .box {
         left: 40px;
-    }
-
-    @media (max-width: 767px) {
-        #timeline ul li .box {
-            width: 630px;
-            bottom: 2px;
-        }
-    }
-
-    @media (max-width: 720px) {
-        #timeline ul li .box {
-            width: 600px;
-        }
-    }
-
-    @media (max-width: 690px) {
-        #timeline ul li .box {
-            width: 570px;
-        }
-    }
-
-    @media (max-width: 660px) {
-        #timeline ul li .box {
-            width: 540px;
-        }
-    }
-
-    @media (max-width: 630px) {
-        #timeline ul li .box {
-            width: 510px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        #timeline ul li .box {
-            width: 480px;
-        }
-    }
-
-    @media (max-width: 570px) {
-        #timeline ul li .box {
-            width: 450px;
-        }
-    }
-
-    @media (max-width: 540px) {
-        #timeline ul li .box {
-            width: 420px;
-        }
-    }
-
-    @media (max-width: 510px) {
-        #timeline ul li .box {
-            width: 390px;
-        }
-
-    }
-
-    @media (max-width: 470px) {
-        #timeline ul li .box {
-            width: 410px;
-        }
-
-        #timeline ul li:nth-child(odd) .box {
-            left: -10px;
-            right: -20px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: -10px;
-            right: -20px;
-        }
-    }
-
-    @media (max-width: 440px) {
-        #timeline ul li .box {
-            width: 370px;
-        }
-
-        #timeline ul li:nth-child(odd) .box {
-            left: -15px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: -15px;
-        }
-    }
-
-    @media (max-width: 410px) {
-        #timeline ul li .box {
-            width: 350px;
-        }
-
-        #timeline ul li:nth-child(odd) .box {
-            left: -20px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: -20px;
-        }
-    }
-
-    @media (max-width: 390px) {
-        #timeline ul li .box {
-            width: 330px;
-            bottom: 2px;
-        }
-    }
-
-    @media (max-width: 370px) {
-        #timeline ul li .box {
-            width: 310px;
-        }
-
     }
 }

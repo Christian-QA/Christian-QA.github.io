@@ -35,14 +35,16 @@ const About: React.FC = () => {
                         <p>{t('about.paragraphTwo')}</p>
                         <br/>
                         <div className="socials">
-                            <a href="https://www.linkedin.com/in/christian-redfern-6aa4291a4/"
-                               className="fa fa-linkedin"><img src={LinkedIn} alt="linkedin" className="icon"/></a>
-                            <a href="https://github.com/Christian-QA" className="fa fa-github"><img src={GitHub}
-                                                                                                    alt="github"
-                                                                                                    className="icon"/></a>
-                            <a href="https://www.upwork.com/freelancers/~01c874e99ae1580bad?mp_source=share"
-                               className="fa fa-upwork"><img src={Upwork}
-                                                             alt="upwork" className="icon"/></a>
+                            <a href="https://www.linkedin.com/in/christian-redfern-6aa4291a4/" className="social-link">
+                                <img src={LinkedIn} alt="linkedin" className="icon"/>
+                            </a>
+                            <a href="https://github.com/Christian-QA" className="social-link">
+                                <img src={GitHub} alt="github" className="icon"/>
+                            </a>
+                            <a href="https://www.upwork.com/freelancers/~01c874e99ae1580bad?mp\_source=share"
+                               className="social-link">
+                                <img src={Upwork} alt="upwork" className="icon"/>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@
 :root {
     -webkit-appearance: none;
     --purple: darkslateblue;
+    --fuchsia: #5e0391;
     --text: #e5ffff;
     --aqua: aqua;
     --white: white;
@@ -30,6 +31,20 @@ body {
     overflow-x: hidden;
 }
 
+.nav-button {
+    color: var(--text);
+    background-color: var(--purple);
+    margin: 0 5px;
+    padding: 5px;
+}
+
+@media (max-width: 400px) {
+    .nav-button {
+        margin: 0 2px;
+        padding: 2px;
+    }
+}
+
 .header {
     background-color: var(--purple);
     text-align: center;
@@ -41,7 +56,7 @@ body {
 
 header {
     background-color: var(--purple);
-    padding: 1rem;
+    padding: 0.8rem;
     max-width: 100%;
     left: 0;
     position: fixed;

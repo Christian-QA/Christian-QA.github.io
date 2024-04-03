@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
                 <label htmlFor="message">{t("contact.message")}</label>
                 <textarea id="message" name="message" rows={15} required minLength={10} maxLength={500}
                           title="Please enter a message between 10 and 500 characters"></textarea>
-                <button type="submit" value="Send" disabled={isDisabled}>{t("contact.send")}</button>
+                <button type="submit" value="Send" className="nav-button" disabled={isDisabled}>{t("contact.send")}</button>
             </form>
         </div>
     );

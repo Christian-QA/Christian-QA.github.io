@@ -49,13 +49,11 @@ const useDescriptionBoxes = () => {
                 const handleClick = () => {
                     element.classList.toggle('active');
                     button.classList.toggle('active_button');
-                    buttonFront.innerHTML = buttonFront.classList.contains('active_button')
+                    buttonFront.innerHTML = button.classList.contains('active_button')
                         ? t('experience.read-less')
                         : t('experience.read-more');
                 };
-
                 button.addEventListener('click', handleClick);
-
                 return () => button.removeEventListener('click', handleClick);
             }
         });
@@ -67,15 +65,17 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
     const { showBoxes, addBoxRef } = useShowBoxes();
     useDescriptionBoxes();
 
+    function experienceTitleConversion(index: number) {
+        if (index == 0) return t("experience.present-year")
+        else return 2025 - index
+    }
+
     const headingsAndEntries = useMemo(() => {
         const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
         return years.reduce(
             (acc: {headings: string[], entries: string[]}, year) => {
                 acc.headings.push(`experience.heading.${year}`);
                 acc.entries.push(`experience.entry.${year}`);
-
-                acc.entries.map(str => str.replace('\n', '<br/>'))
-
                 return acc;
             },
             { headings: [], entries: [] }
@@ -89,14 +89,14 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
                     <ul className="timeline-ul">
                         {headingsAndEntries.headings.map((heading, index) => (
                             <li key={index}>
-                                <i className="experience-item">{2025 - index}</i>
+                                <i className="experience-item">{experienceTitleConversion(index)}</i>
                                 <div className={`box ${showBoxes[index] ? 'show' : ''}`}
                                      ref={(ref) => addBoxRef(ref, index)}>
                                     <h3 className="title">{t(heading)}</h3>
                                     <div className="description-box">
                                         <Trans i18nKey="message" className="trans"><p className="trans">{t(headingsAndEntries.entries[index])}</p></Trans>
                                         <button className="button">
-                                            <div className="button_front">{t("experience.read-more")}</div>
+                                            <div className="button_front">{t('experience.read-more')}</div>
                                         </button>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
                     </ul>
                 </div>
         </div>
-);
+    );
 };
 
 export default Experience;
