@@ -1,10 +1,4 @@
-.experience-section {
-    align-items: center;
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0 0 5%;
-}
-
+.experience-section,
 .experience-container {
     align-items: center;
     max-width: 100%;
@@ -218,14 +212,14 @@
 }
 
 @media (max-width: 768px) {
-
     .experience-container {
         align-items: flex-start;
         width: 80px;
     }
 
     #timeline ul li .box {
-        width: 380px;
+        width: 77vw;
+        max-width: 77vw; /* Increase the maximum width to 90% of the viewport width */
     }
 
     #timeline ul li:nth-child(even) .box:before {
@@ -239,120 +233,5 @@
 
     #timeline ul li:nth-child(even) .box {
         left: 40px;
-    }
-
-    @media (max-width: 767px) {
-        #timeline ul li .box {
-            width: 630px;
-            bottom: 2px;
-        }
-    }
-
-    @media (max-width: 720px) {
-        #timeline ul li .box {
-            width: 600px;
-        }
-    }
-
-    @media (max-width: 690px) {
-        #timeline ul li .box {
-            width: 570px;
-        }
-    }
-
-    @media (max-width: 660px) {
-        #timeline ul li .box {
-            width: 540px;
-        }
-    }
-
-    @media (max-width: 630px) {
-        #timeline ul li .box {
-            width: 510px;
-        }
-    }
-
-    @media (max-width: 600px) {
-        #timeline ul li .box {
-            width: 480px;
-        }
-    }
-
-    @media (max-width: 570px) {
-        #timeline ul li .box {
-            width: 450px;
-        }
-    }
-
-    @media (max-width: 540px) {
-        #timeline ul li .box {
-            width: 420px;
-        }
-    }
-
-    @media (max-width: 510px) {
-        #timeline ul li .box {
-            width: 390px;
-        }
-
-    }
-
-    @media (max-width: 470px) {
-        #timeline ul li .box {
-            width: 390px;
-            left: 12px;
-        }
-
-        #timeline ul li:nth-child(odd) .box {
-            left: 12px;
-            right: -20px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: 12px;
-            right: -20px;
-        }
-    }
-
-    @media (max-width: 440px) {
-        #timeline ul li .box {
-            width: 360px;
-        }
-
-        #timeline ul li:nth-child(odd) .box {
-            left: 12px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: 12px;
-        }
-    }
-
-    @media (max-width: 410px) {
-        #timeline ul li .box {
-            width: 330px;
-        }
-
-        #timeline ul li:nth-child(odd) .box {
-            left: 12px;
-        }
-
-        #timeline ul li:nth-child(even) .box {
-            left: 12px;
-        }
-    }
-
-    @media (max-width: 390px) {
-        #timeline ul li .box {
-            width: 310px;
-            bottom: 2px;
-        }
-    }
-
-    @media (max-width: 370px) {
-        #timeline ul li .box {
-            width: 290px;
-        }
-
     }
 }
