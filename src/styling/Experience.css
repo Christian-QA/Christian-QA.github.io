@@ -52,11 +52,12 @@
 #timeline .title {
     /*box-shadow: 0 5px 10px black;*/
     margin-top: 0;
-    padding: 0.8rem 0 1rem 0.7rem;
+    padding: 1rem;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background-color: var(--purple);
+    text-align: center;
 }
 
 #timeline .year {
@@ -74,6 +75,8 @@
     line-height: 1.5;
     padding: 0;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 #timeline .description-box.active {
@@ -83,7 +86,7 @@
 
 #timeline p {
     padding: 1rem 0 1rem 1rem;
-    overflow: auto;
+    overflow: hidden;
 }
 
 #timeline button {

@@ -56,7 +56,7 @@ const Messages = {
                 "experience.heading.2018": "Web Practitioner",
                 "experience.entry.2018": "My first exposure to programming was through the creation of a D&D web app I decided to create to compliment a campaign I was running. The intention was to create an immersive portal for my friends to use to gain clarity on the custom world they were playing in. I had no prior coding experience at this time, and certainly had no idea of the journey it would lead me on. I had recently finished my mechanical engineering HND and concluded that I hated mechanical engineering, which made me very uncertain of my future. Additionally, I had started a career in frontline security, lacking the confidence to explore anything technical after not vibing with mechanical engineering. My software development hobby is what freed me from a path I was not supposed to be on, building the foundation for my skill and passion for the craft.\n",
 
-                "experience.read-more": "Read More",
+                "experience.read-more": "Click here to read more",
                 "experience.read-less": "Read Less",
 
                 "projects.header": "Personal Projects",
