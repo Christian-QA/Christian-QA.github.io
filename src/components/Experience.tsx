@@ -1,22 +1,17 @@
-import React, {useState, useEffect, useMemo, useRef} from 'react';
-import i18n from 'i18next';
-import {initReactI18next, Trans, useTranslation} from 'react-i18next';
-import Messages from '../lang/en.tsx';
-import '../styling/Experience.css'
-
-i18n.use(initReactI18next).init(Messages);
+import { useState, useEffect, useMemo, useRef } from 'react';
+import {Trans, useTranslation} from 'react-i18next';
+import '../styling/Experience.css';
 
 const useShowBoxes = () => {
-    const [showBoxes, setShowBoxes] = useState<boolean[]>([]);
-    const boxRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const [showBoxes, setShowBoxes] = useState([]);
+    const boxRefs = useRef([]);
 
     useEffect(() => {
         const handleScroll = () => {
             const triggerBottom = (window.innerHeight / 5) * 4;
             const newShowBoxes = boxRefs.current.map((box) => {
                 if (box) {
-                    const topBox = box.getBoundingClientRect().top;
-                    return topBox < triggerBottom;
+                    return box.getBoundingClientRect().top < triggerBottom;
                 }
                 return false;
             });
@@ -24,12 +19,10 @@ const useShowBoxes = () => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const addBoxRef = (ref: HTMLDivElement | null, index: number) => {
+    const addBoxRef = (ref: HTMLDivElement, index: number) => {
         boxRefs.current[index] = ref;
     };
 
@@ -40,8 +33,7 @@ const useDescriptionBoxes = () => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        const descriptionBoxElements = document.querySelectorAll('.description-box');
-        descriptionBoxElements.forEach((element) => {
+        document.querySelectorAll('.description-box').forEach((element) => {
             const button = element.querySelector('#timeline button');
             const buttonFront = element.querySelector('#timeline .button_front');
 
@@ -49,7 +41,7 @@ const useDescriptionBoxes = () => {
                 const handleClick = () => {
                     element.classList.toggle('active');
                     button.classList.toggle('active_button');
-                    buttonFront.innerHTML = button.classList.contains('active_button')
+                    buttonFront.textContent = button.classList.contains('active_button')
                         ? t('experience.read-less')
                         : t('experience.read-more');
                 };
@@ -60,20 +52,18 @@ const useDescriptionBoxes = () => {
     }, [t]);
 };
 
-const Experience: React.FC = () => { // TODO - Fix random right scroll
+const Experience = () => {
     const { t } = useTranslation();
     const { showBoxes, addBoxRef } = useShowBoxes();
     useDescriptionBoxes();
 
-    function experienceTitleConversion(index: number) {
-        if (index == 0) return t("experience.present-year")
-        else return 2025 - index
-    }
+    const experienceTitleConversion = (index: number) =>
+        index === 0 ? t('experience.present-year') : 2025 - index;
 
     const headingsAndEntries = useMemo(() => {
         const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
         return years.reduce(
-            (acc: {headings: string[], entries: string[]}, year) => {
+            (acc, year) => {
                 acc.headings.push(`experience.heading.${year}`);
                 acc.entries.push(`experience.entry.${year}`);
                 return acc;
@@ -84,29 +74,30 @@ const Experience: React.FC = () => { // TODO - Fix random right scroll
 
     return (
         <div className="section-content">
-            <h2 className="header">{t("experience.header")}</h2>
-                <div className="experience-container" id="timeline">
-                    <ul className="timeline-ul">
-                        {headingsAndEntries.headings.map((heading, index) => (
-                            <li key={index}>
-                                <i className="experience-item">{experienceTitleConversion(index)}</i>
-                                <div className={`box ${showBoxes[index] ? 'show' : ''}`}
-                                     ref={(ref) => addBoxRef(ref, index)}>
-                                    <h3 className="title">{t(heading)}</h3>
-                                    <div className="description-box">
-                                        <Trans i18nKey="message" className="trans"><p className="trans">{t(headingsAndEntries.entries[index])}</p></Trans>
-                                        <button className="button">
-                                            <div className="button_front">{t('experience.read-more')}</div>
-                                        </button>
-                                    </div>
+            <h2 className="header">{t('experience.header')}</h2>
+            <div className="experience-container" id="timeline">
+                <ul className="timeline-ul">
+                    {headingsAndEntries.headings.map((heading, index) => (
+                        <li key={index}>
+                            <i className="experience-item">{experienceTitleConversion(index)}</i>
+                            <div className={`box ${showBoxes[index] ? 'show' : ''}`} ref={(ref) => addBoxRef(ref, index)}>
+                                <h3 className="title">{t(heading)}</h3>
+                                <div className="description-box">
+                                    <Trans i18nKey="message">
+                                        <p>{t(headingsAndEntries.entries[index])}</p>
+                                    </Trans>
+                                    <button className="button">
+                                        <div className="button_front">{t('experience.read-more')}</div>
+                                    </button>
                                 </div>
-                            </li>
-                        ))}
-                        <li className="bottom">
-                            <i className="experience-item">2017</i>
+                            </div>
                         </li>
-                    </ul>
-                </div>
+                    ))}
+                    <li className="bottom">
+                        <i className="experience-item">2017</i>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 };
